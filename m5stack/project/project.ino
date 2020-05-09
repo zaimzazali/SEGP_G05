@@ -31,11 +31,11 @@ void drawFrame() {
 }
 
 void drawCenterString(String s, int16_t x0, int16_t x1, int16_t y) {
-  String tx= "01234abc; ";
+  String tx= "SSSSSSSSSS";
   int16_t fontSize = (M5.Lcd.textWidth(tx)+9)/10;
   int16_t x;
   int16_t w = abs(x1-x0);
-  int length = fontSize*s.length();
+  int length = M5.Lcd.textWidth(s);
   if (w > length) {  x = (x0+x1)/2-length/2; }
   else {
     x = x0;
@@ -54,23 +54,25 @@ void drawDisplayData(std::vector<String> v, int16_t x, int16_t y, int16_t w, int
   int count = 0;
   int i = 0;
 
-  M5.Lcd.drawString(String(w), 202, 2, 1);
-  M5.Lcd.drawString(String(fontW), 202, 12, 1);
-  M5.Lcd.drawString(String(col), 202, 22, 1);
   // M5.Lcd.drawString(String(www), 202, 2, 1);
   for (int j = 0; i < row && j < len; j++) {
 
     int size = v[j].length();
-    int insec = size/col;
     int start = 0;
-    for (int k = 0; k < insec && i < row; k++) {
-      M5.Lcd.drawString(v[j].substring(start, start+col), x, y+i*fontH, 1);
-      i += 1;
-      start += col;
-    }
-    if (start < size) {
-      M5.Lcd.drawString(v[j].substring(start), x, y+i*fontH, 1);
-      i += 1;
+    while (start < size) {
+      int end = start+1;
+      while (end < size && M5.Lcd.textWidth(v[j].substring(start, end)) <= w){
+        end++;
+      }
+
+      i ++;
+      if (end == size) {
+        M5.Lcd.drawString(v[j].substring(start, end), x, y+i*fontH, 1);
+        start = end;}
+      else {
+        M5.Lcd.drawString(v[j].substring(start, end-1), x, y+i*fontH, 1);
+        start = end-1;
+      }
     }
     if (i < row && j < len) {
       i++;
@@ -85,7 +87,7 @@ void CallBackProject(MenuItem* sender) {
   if (!mi->isChild) { return; }
 
   M5.Lcd.fillRect(r.x+r.w+5, r.y+20, M5.Lcd.width()-r.x-r.w-8, r.h-16, treeView.backColor[0]);
-  drawCenterString(user, r.x+r.w+2+2, M5.Lcd.width()-2, r.y+2);
+  // drawCenterString(user, r.x+r.w+2+2, M5.Lcd.width()-2, r.y+2);
   drawDisplayData(mi->projectData, r.x+r.w+5, r.y+20, M5.Lcd.width()-r.x-r.w-8, r.h-16);
 }
 
