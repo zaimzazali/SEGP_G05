@@ -28,7 +28,6 @@ void drawFrame() {
   M5.Lcd.drawRect(r.x -1, r.y, r.w +2, r.h, MenuItem::frameColor[1]);
   M5.Lcd.drawRect(r.x, r.y -1, r.w, r.h +2, MenuItem::frameColor[1]);
   M5.Lcd.drawFastHLine(r.x+r.w+5, r.y+13, M5.Lcd.width()-r.x-r.w-6, MenuItem::frameColor[1]);
-
 }
 
 void drawCenterString(String s, int16_t x0, int16_t x1, int16_t y) {
@@ -45,29 +44,29 @@ void drawCenterString(String s, int16_t x0, int16_t x1, int16_t y) {
   M5.Lcd.drawString(s, x, y, 1);
 }
 
-void drawDisplayData(String l[], int16_t x, int16_t y, int16_t w, int16_t h) {
+void drawDisplayData(std::vector<String> v, int16_t x, int16_t y, int16_t w, int16_t h) {
   int16_t fontSize = 6;
   int fontW = fontSize;
   int fontH = fontSize+2;
   int row = h/fontH;
   int col = w/fontW;
-  int len = sizeof(l);
+  int len = v.size();
   int count = 0;
   int i = 0;
 
   for (int j = 0; i < row && j < len; j++) {
 
-    int size = l[j].length();
+    int size = v[j].length();
     int insec = size/col;
     int start = 0;
     for (int k = 0; k < insec && i < row; k++) {
 
-      M5.Lcd.drawString(l[j].substring(start, start+col), x, y+i*fontH, 1);
+      M5.Lcd.drawString(v[j].substring(start, start+col), x, y+i*fontH, 1);
       i += 1;
       start += col;
     }
     if (start < size) {
-      M5.Lcd.drawString(l[j].substring(start), x, y+i*fontH, 1);
+      M5.Lcd.drawString(v[j].substring(start), x, y+i*fontH, 1);
       i += 1;
     }
     if (i < row && j < len) {
@@ -79,14 +78,12 @@ void drawDisplayData(String l[], int16_t x, int16_t y, int16_t w, int16_t h) {
 void CallBackProject(MenuItem* sender) {
   MenuItemProject* mi = static_cast<MenuItemProject*>(sender);
   Rect16 r = treeView.clientRect;
-  if (!mi) { return; drawCenterString("aaaa", r.x+r.w+2+2, M5.Lcd.width()-2, r.y+2);}
-  if (!mi->isChild) { return; drawCenterString("bbbb", r.x+r.w+2+2, M5.Lcd.width()-2, r.y+2);}
+  if (!mi) { return; }
+  if (!mi->isChild) { return; }
 
-  header.draw();
-  // M5.Lcd.fillRect(r.x+r.w+5, r.y+15, M5.Lcd.width()-r.x-r.w-8, 183, treeView.backColor[0]);
-  drawCenterString(user, r.x+r.w+2+2, M5.Lcd.width()-2, r.y+20);
-  drawCenterString(mi->projectData[1], r.x+r.w+2+2, M5.Lcd.width()-2, r.y+30);
-  drawDisplayData(mi->projectData, r.x+r.w+5, r.y+15, M5.Lcd.width()-r.x-r.w-8, 183);
+  M5.Lcd.fillRect(r.x+r.w+5, r.y+15, M5.Lcd.width()-r.x-r.w-8, r.h-16, treeView.backColor[0]);
+  drawCenterString(user, r.x+r.w+2+2, M5.Lcd.width()-2, r.y+2);
+  drawDisplayData(mi->projectData, r.x+r.w+5, r.y+15, M5.Lcd.width()-r.x-r.w-8, r.h-16);
 }
 
 void CallBackStyle(MenuItem* sender)
@@ -218,13 +215,14 @@ void setup() {
   osk.msecHold   = treeView.msecHold;
   osk.msecRepeat = treeView.msecRepeat;
 
+  Rect16 r = treeView.clientRect;
   treeView.setItems(vmi
                { new MenuItem("main 1", 1, vmi
                  { new MenuItem("sub 1-1", 11, vmi
                    { new MenuItem("sub 1-1-1", 111)
                    } )
                  } )
-               , new MenuItemProject("ProJectList", CallBackProject)
+               , new MenuItemProject("ProJect List", CallBackProject, r.x+r.w+5, r.y+15, M5.Lcd.width()-r.x-r.w-8, r.h-16)
                , new MenuItem("Setting", vmi
                {
                  new MenuItem("Style", CallBackStyle, vmi

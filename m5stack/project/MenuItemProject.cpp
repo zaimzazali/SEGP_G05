@@ -8,11 +8,7 @@ void MenuItemProject::onEnter() {
 
 void MenuItemProject::onExit() {
   deleteItems();
-  // for (int i = 0; i < 2; i++) {
-  //   delete[] projectList[i]; // delete sub array
-  // }
-  // delete [] projectList; //delete outer array
-  // projectList = NULL;
+  M5.Lcd.fillRect(x, y, w, h, 0x0000);
 
   MenuItem::onExit();
 }
@@ -37,18 +33,17 @@ void MenuItemProject::fetchProjectData() {
   deleteItems();
 
   int count = 2;
-  // M5.Lcd.drawString(list[0][1], 202,  20, 1);
+  // M5.Lcd.drawString(String(x), 202,  10, 1);
 
   for (int i = 0; i < count; i++) {
+    MenuItemProject* mi = new MenuItemProject(list[i][1]);
+    mi->x = x;
+    mi->y = y;
+    mi->w = w;
+    mi->h = h;
     for (int j = 0; j < 4; j++) {
-      // projectData[j] = list[i][j];
-      // projectData[j] = String("user");
-      // projectData[j] = j;
-      projectData[j] = "user";
+      mi->projectData.push_back(list[i][j]);
     }
-    String s[4] = list[i];
-    MenuItemProject* mi = new MenuItemProject(s[1], list[i]);
-
     addItem(mi);
   }
 }
