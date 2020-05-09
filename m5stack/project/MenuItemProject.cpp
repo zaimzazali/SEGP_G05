@@ -7,6 +7,7 @@ void MenuItemProject::onEnter() {
 }
 
 void MenuItemProject::onExit() {
+  
   deleteItems();
   M5.Lcd.fillRect(x, y, w, h, 0x0000);
 

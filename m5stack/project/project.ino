@@ -27,12 +27,12 @@ void drawFrame() {
   r.inflate(1);
   M5.Lcd.drawRect(r.x -1, r.y, r.w +2, r.h, MenuItem::frameColor[1]);
   M5.Lcd.drawRect(r.x, r.y -1, r.w, r.h +2, MenuItem::frameColor[1]);
-  M5.Lcd.drawFastHLine(r.x+r.w+5, r.y+13, M5.Lcd.width()-r.x-r.w-6, MenuItem::frameColor[1]);
+  M5.Lcd.drawFastHLine(r.x+r.w+5, r.y+18, M5.Lcd.width()-r.x-r.w-8, MenuItem::frameColor[1]);
 }
 
 void drawCenterString(String s, int16_t x0, int16_t x1, int16_t y) {
-  // font size 1 : 6*6
-  int16_t fontSize = 6;
+  String tx= "01234abc; ";
+  int16_t fontSize = (M5.Lcd.textWidth(tx)+9)/10;
   int16_t x;
   int16_t w = abs(x1-x0);
   int length = fontSize*s.length();
@@ -45,22 +45,25 @@ void drawCenterString(String s, int16_t x0, int16_t x1, int16_t y) {
 }
 
 void drawDisplayData(std::vector<String> v, int16_t x, int16_t y, int16_t w, int16_t h) {
-  int16_t fontSize = 6;
-  int fontW = fontSize;
-  int fontH = fontSize+2;
+  String tx= "SSSSSSSSSS";
+  int fontW = (M5.Lcd.textWidth(tx)+9)/10;
+  int fontH = (fontW+2)*10/9;
   int row = h/fontH;
   int col = w/fontW;
   int len = v.size();
   int count = 0;
   int i = 0;
 
+  M5.Lcd.drawString(String(w), 202, 2, 1);
+  M5.Lcd.drawString(String(fontW), 202, 12, 1);
+  M5.Lcd.drawString(String(col), 202, 22, 1);
+  // M5.Lcd.drawString(String(www), 202, 2, 1);
   for (int j = 0; i < row && j < len; j++) {
 
     int size = v[j].length();
     int insec = size/col;
     int start = 0;
     for (int k = 0; k < insec && i < row; k++) {
-
       M5.Lcd.drawString(v[j].substring(start, start+col), x, y+i*fontH, 1);
       i += 1;
       start += col;
@@ -81,9 +84,9 @@ void CallBackProject(MenuItem* sender) {
   if (!mi) { return; }
   if (!mi->isChild) { return; }
 
-  M5.Lcd.fillRect(r.x+r.w+5, r.y+15, M5.Lcd.width()-r.x-r.w-8, r.h-16, treeView.backColor[0]);
+  M5.Lcd.fillRect(r.x+r.w+5, r.y+20, M5.Lcd.width()-r.x-r.w-8, r.h-16, treeView.backColor[0]);
   drawCenterString(user, r.x+r.w+2+2, M5.Lcd.width()-2, r.y+2);
-  drawDisplayData(mi->projectData, r.x+r.w+5, r.y+15, M5.Lcd.width()-r.x-r.w-8, r.h-16);
+  drawDisplayData(mi->projectData, r.x+r.w+5, r.y+20, M5.Lcd.width()-r.x-r.w-8, r.h-16);
 }
 
 void CallBackStyle(MenuItem* sender)
@@ -222,7 +225,7 @@ void setup() {
                    { new MenuItem("sub 1-1-1", 111)
                    } )
                  } )
-               , new MenuItemProject("ProJect List", CallBackProject, r.x+r.w+5, r.y+15, M5.Lcd.width()-r.x-r.w-8, r.h-16)
+               , new MenuItemProject("ProJect List", CallBackProject, r.x+r.w+5, r.y+20, M5.Lcd.width()-r.x-r.w-8, r.h-16)
                , new MenuItem("Setting", vmi
                {
                  new MenuItem("Style", CallBackStyle, vmi
