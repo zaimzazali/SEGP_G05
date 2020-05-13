@@ -203,7 +203,7 @@ Below is the simplest practical model design and currently in use for this parti
 
 We have initially splitted this ambitious idea into several smaller chunks in order to fully realise it. It would require few more sprints in order to deploy the three products with the full features and functionalities. However, due to time constraints, we only managed to undergo two times of the full software development life cycle, or simply with two Sprints. With this two Sprints, we managed to produce two versions of the Minimum Viable Products (MVPs).
 
-To be continued...
+Below is the visualisation of the project miletone :-
 
 ### Project Evaluation
 
