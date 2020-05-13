@@ -166,7 +166,7 @@ Below is the simplest practical model design and currently in use for this parti
 
 > Product : **Standalone Software** <br>
 > User : **Schools / Departments** <br><br>
-> Functionalities :-
+> Accessibility to database :-
 >
 > 1. It SELECT only from the views (Cyan coloured).
 > 2. All relevant attributes or columns have been provided to allow the software to manipulate and process the data to come out with the insights (counts of student, etc...).
@@ -175,7 +175,7 @@ Below is the simplest practical model design and currently in use for this parti
 >
 > Product : **Web Application** <br>
 > User : **Lecturers** <br><br>
-> Functionalities :-
+> Accessibility to database :-
 >
 > 1. It INSERT the data into the 'final_projects' table.
 >
@@ -183,7 +183,7 @@ Below is the simplest practical model design and currently in use for this parti
 >
 > Product : **IoT Device (M5 Stack)** <br>
 > User : **Students** <br><br>
-> Functionalities :-
+> Accessibility to database :-
 >
 > 1. It SELECT the 'view_projects' view and displays the project list.
 > 2. It INSERT the data into the 'student_project' table once the student booked a particular topic.
