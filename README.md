@@ -79,9 +79,8 @@ The whole system would be involving different kind of products with different of
 
 <br>
 
-> <div><div style="float:left;">Product</div><div style="padding-left: 10%;">: <b>Standalone Software</b></div></div>
-> <div><div>User</div><div style="padding-left: 10%;">: <b>Schools / Departments</b></div></div>
-> <br>
+> Product : **Standalone Software** <br>
+> User : **Schools / Departments** <br><br>
 > Functionalities :-
 >
 > <ol style="padding-left: 16%">
