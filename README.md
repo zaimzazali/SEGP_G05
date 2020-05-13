@@ -83,36 +83,32 @@ The whole system would be involving different kind of products with different of
 > User : **Schools / Departments** <br><br>
 > Functionalities :-
 >
-> <ol style="padding-left: 16%">
->   <li>It is the single-point monitoring system that comes together with the data visualisations.<br>It acts as a Dashboard that gives end-to-end information and insights.</li>
->   <li>To monitor the allocations of the final project topics to current active students.<br>It checks for students that have secured their research topic, and for those who are still yet to confirm any topics.</li>
->   <li>The data will be updated in real-time to give the latest information to the Unit Director and Coordinator which allows them to plan their next steps ahead of time.</li>
->   <li>To mitigate issues related to students who could not secure any topics at the last minute of the project proposal period.</li>
-> </ol>
+> 1. It is the single-point monitoring system that comes together with the data visualisations.<br>It acts as a Dashboard that gives end-to-end information and insights.
+> 2. To monitor the allocations of the final project topics to current active students.<br>It checks for students that have secured their research topic, and for those who are still yet to confirm any topics.
+> 3. The data will be updated in real-time to give the latest information to the Unit Director and Coordinator which allows them to plan their next steps ahead of time.
+> 4. To mitigate issues related to students who could not secure any topics at the last minute of the project proposal period.
+>
 > <br>
-> <div><div style="float:left">Product</div><div style="padding-left: 10%">: <b>Web Application</b></div></div>
-> <div><div style="float:left">User</div><div style="padding-left: 10%">: <b>Lecturers</b></div></div>
-> <br>
+>
+> Product : **Web Application** <br>
+> User : **Lecturers** <br><br>
 > Functionalities :-
 >
-> <ol style="padding-left: 16%">
->   <li>It is a web platform that allows any available Lecturers to publish their current on-going or newly proposed projects online, which will be visible to students.</li>
->   <li>It is a channel for the lecturers to provide a detailed information regarding the project scope, project objectives, project grants, availability status, supervisors, desired students, and any other crucial information that are related to the project.</li>
->   <li>The lecturers could accept or decline any project requests from students.</li>
->   <li>Its data will also be up-to-date real-time and will provide the latest information to students in order to prevent any conflicting issues.</li>
-> </ol>
+> 1. It is a web platform that allows any available Lecturers to publish their current on-going or newly proposed projects online, which will be visible to students.
+> 2. It is a channel for the lecturers to provide a detailed information regarding the project scope, project objectives, project grants, availability status, supervisors, desired students, and any other crucial information that are related to the project.
+> 3. The lecturers could accept or decline any project requests from students.
+> 4. Its data will also be up-to-date real-time and will provide the latest information to students in order to prevent any conflicting issues.
+>
 > <br>
-> <div><div style="float:left">Product</div><div style="padding-left: 10%">: <b>IoT Device (M5 Stack)</b></div></div>
-> <div><div style="float:left">User</div><div style="padding-left: 10%">: <b>Students</b></div></div>
-> <br>
+>
+> Product : **IoT Device (M5 Stack)** <br>
+> User : **Students** <br><br>
 > Functionalities :-
 >
-> <ol style="padding-left: 16%">
->   <li>It is a simple compact device that will be used by the active students which allows them to check for any available final project topics, and book them.</li>
->   <li>From the device, the student could view the list of projects together with the project details.</li>
->   <li>If there is a project that meet the student's interest, the student could book the topic and wait for the approval from the lecturer who posted the topic.</li>
->   <li>While there is no confirmed student that booked the topic, any students could book the topic and express their interests for it, until the topic is confirmed.</li>
-> </ol>
+> 1. It is a simple compact device that will be used by the active students which allows them to check for any available final project topics, and book them.
+> 2. From the device, the student could view the list of projects together with the project details.
+> 3. If there is a project that meet the student's interest, the student could book the topic and wait for the approval from the lecturer who posted the topic.
+> 4. While there is no confirmed student that booked the topic, any students could book the topic and express their interests for it, until the topic is confirmed.
 
 <br>
 To sum everything up, below is a story which will give you an idea on how these products would complement each other forming an end-to-end system.
@@ -168,35 +164,34 @@ Below is the simplest practical model design and currently in use for this parti
 
 <br>
 
-> <div><div style="float:left">Product</div><div style="padding-left: 10%">: <b>Standalone Software</b></div></div>
-> <div><div style="float:left">User</div><div style="padding-left: 10%">: <b>Schools / Departments</b></div></div>
-> <br>
-> Accessibility to database :-
+> Product : **Standalone Software** <br>
+> User : **Schools / Departments** <br><br>
+> Functionalities :-
 >
-> <ol style="padding-left: 26%">
->   <li>It SELECT only from the views (Cyan coloured).</li>
->   <li>All relevant attributes or columns have been provided to allow the software to manipulate and process the data to come out with the insights (counts of student, etc...).</li>
-> </ol>
-> <br>
-> <div><div style="float:left">Product</div><div style="padding-left: 10%">: <b>Web Application</b></div></div>
-> <div><div style="float:left">User</div><div style="padding-left: 10%">: <b>Lecturers</b></div></div>
-> <br>
-> Accessibility to database :-
+> 1. It SELECT only from the views (Cyan coloured).
+> 2. All relevant attributes or columns have been provided to allow the software to manipulate and process the data to come out with the insights (counts of student, etc...).
 >
-> <ol style="padding-left: 26%">
->   <li>It INSERT the data into the 'final_projects' table.</li>
-> </ol>
 > <br>
-> <div><div style="float:left">Product</div><div style="padding-left: 10%">: <b>IoT Device (M5 Stack)</b></div></div>
-> <div><div style="float:left">User</div><div style="padding-left: 10%">: <b>Students</b></div></div>
-> <br>
-> Accessibility to database :-
 >
-> <ol style="padding-left: 26%">
->   <li>It SELECT the 'view_projects' view and displays the project list.</li>
->   <li>It INSERT the data into the 'student_project' table once the student booked a particular topic.</li>
->   <li>It UPDATE the 'isAvailable' attribute in the 'final_projects' table to 'false' once a student confirmed the topic.</li>
-> </ol>
+> Product : **Web Application** <br>
+> User : **Lecturers** <br><br>
+> Functionalities :-
+>
+> 1. It INSERT the data into the 'final_projects' table.
+>
+> <br>
+>
+> Product : **IoT Device (M5 Stack)** <br>
+> User : **Students** <br><br>
+> Functionalities :-
+>
+> 1. It SELECT the 'view_projects' view and displays the project list.
+> 2. It INSERT the data into the 'student_project' table once the student booked a particular topic.
+> 3. It UPDATE the 'isAvailable' attribute in the 'final_projects' table to 'false' once a student confirmed the topic.
+
+<br>
+
+#### Evolution of UI Wireframes
 
 <br>
 
@@ -205,6 +200,10 @@ Below is the simplest practical model design and currently in use for this parti
 <br>
 
 ### System Implementation
+
+We have initially splitted this ambitious idea into several smaller chunks in order to fully realise it. It would require few more sprints in order to deploy the three products with the full features and functionalities. However, due to time constraints, we only managed to undergo two times of the full software development life cycle, or simply with two Sprints. With this two Sprints, we managed to produce two versions of the Minimum Viable Products (MVPs).
+
+To be continued...
 
 ### Project Evaluation
 
