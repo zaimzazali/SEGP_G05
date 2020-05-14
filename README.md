@@ -188,6 +188,10 @@ Below is the simplest practical model design and currently in use for this parti
 >
 > 1. It SELECT only from the views (Cyan coloured).
 > 2. All relevant attributes or columns have been provided to allow the software to manipulate and process the data to come out with the insights (counts of student, etc...).
+> 3. It displays the percentage of students with and without a project allocated.
+> 4. It allows the user to search for a particular student by his name.
+> 5. It  will enable the user to filter students with/without a project allocated.
+> 5. When a student is selected, it shows the data related to the student's project. This data comprehends project info, supervisor info.
 >
 > <br>
 >
