@@ -211,10 +211,6 @@ With the drawn ideas, we had transformed them into the real UI as below :-
 > | :---------------------------------------------------------------------: |
 > | <img src="./readme_assets/picture_m5stack/brightness.png" width="1000"> |
 >
-> |                            Change Style                            |
-> | :------------------------------------------------------------- --: |
-> | <img src="./readme_assets/picture_m5stack/style.png" width="1000"> |
->
 <br>
 
 #### Communication Protocol
