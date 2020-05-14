@@ -187,6 +187,10 @@ With the drawn ideas, we had transformed them into the real UI as below :-
 > | :------------------------------------------------------------------: |
 > | <img src="./readme_assets/screenshots_web/success.png" width="1000"> |
 >
+> |                     Update their Credentials                      |
+> | :---------------------------------------------------------------: |
+> | <img src="./readme_assets/screenshots_web/user.png" width="1000"> |
+>
 > <br>
 >
 > Product : **IoT Device (M5 Stack)** <br>
@@ -286,6 +290,26 @@ Below is the visualisation of the project milestone :-
 </p>
 
 #### Project Design Evaluation
+
+There are many approaches to evaluate the system design. Some methods would require software tools, and some would be needing the human interactions and participations.
+
+We did the evaluations for our system design with a controlled environment and condition at the University of Bristol (UoB).
+
+To have a robust evaluation, our team had combined two different techniques that were :-
+
+1. Focus Groups
+2. Survey
+
+> We gathered about three to five students of MSc Computer Science, to discuss about our idea. We gave them a chance to test out our Paper Prototype which would give them a glimpse of feeling and experience of using our products.
+>
+> Some of the feedbacks were positive and some would require us to do a few major and minor changes to the products. However, we have noticed some patterns out of the feedbacks given to us.
+>
+> 1. Positive feedbacks were coming from those who were really aware on the system functionalities. As if they understood the thoughts of the designers and why the system had been designed the way it was designed in the first place.
+> 2. Others would be coming from their previous experiences with other systems. They were coming from the perspectives of a user who did not interested in a particular system and would like to find other alternative applications.
+>
+> Thus, we could say that the effectiveness of these approaches would be highly dependent on the individual's exposure. Some people might be giving the uncorrelated feedbacks with 'what they believed' and 'what they should be doing' as they came up with a biased expectation and experience in their mind, to begin with.
+>
+> Nevertheless, any feedback would be a priceless view when it comes to the product enhancements as no feedback would a worthless feedback as long as you know how to interpret it make use of it, properly. Besides, this is what the 'Customer-Centric' strategy is all about. It is **not** about what you can build, but it **will always** be about what you can do to help the community around you.
 
 #### Social and Ethical Implications
 
