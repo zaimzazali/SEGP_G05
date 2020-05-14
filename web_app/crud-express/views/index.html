@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>submit project</title>
+	<link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../public/css/index.css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+	<meta name="author" content="cry">
+	<meta name="keywords" content="project list">
+	<meta name="description" content="submit project by teacher">
+	<meta content="" name="description">
+	<link rel="icon" href="../public/img/p.jpg" alt="project-logo">
+
+
+	<script src="../public/js/link.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#" onclick="linkNewProject()">New Project</a></li>
+				<li><a href="#" onclick="linkUser()">User</a></li>
+				<li><a href="#" onclick="linkProjectList()">Project List</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+	<div class="banner">
+		<img id="blackboard" src="../public/img/banner0-blackboard.jpg" alt="blackboad">
+		<h2>Complete here:</h2>
+		<div class="project_teacher">
+			<div class="form">
+				<div class="project_information">
+					<div class="box">
+						<h3>Project</h3>
+						Project ID: <input type="text" name="project_id" value="00000001"><br>
+						Project Name: <input type="text" name="project_name" value="Design a system for lecturer to submit projects"><br>
+						Project Detail: <input type="text" name="project_detail" value="detailed content..."><br>
+						Available Students:
+						<select name="available_students" style="width: 300px">
+							<option class="students" value="Computer Science">Computer Science (Conversion)</option>
+							<option class="students" value="Advandced Computing">Advanced Computing</option>
+							<option class="students" value="Robotics" selected="Robotics">Robotics</option>
+							<option class="students" value="All">All</option>
+						</select><br>
+						Project Status: <input type="text" name="project_status" value="available"><br>
+						Upload File:
+						<form>
+							<input type="file" name="project_file" id="file" accept="application/pdf" />
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="form">
+				<div class="teacher_information">
+					<div class="box">
+						<h3>Lecturer</h3>
+						Lecturer Name: <input type="text" name="teacher_name" value="test"><br>
+						Email Address: <input type="text" name="email_address" value="test@test.com"><br>
+						School Information: <input type="text" name="school_information" value="University of Bristol"><br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<form action="submit_success.html" method="get" target="_blank">
+				<button type="submit">Submit New Project</button></form>
+
+
+</body>
+</html>

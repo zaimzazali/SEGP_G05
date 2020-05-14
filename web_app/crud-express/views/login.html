@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>login</title>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../public/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/user.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no">
+    <meta name="author" content="cry">
+    <meta name="keywords" content="project list">
+    <meta name="description" content="submit project by teacher">
+    <meta content="" name="description">
+    <link rel="icon" href="../public/img/p.jpg" alt="project-logo">
+
+    <script src="../public/js/link.js"></script>
+</head>
+<body>
+<div class="banner">
+    <img id="blackboard" src="../public/img/banner0-blackboard.jpg" alt="blackboad">
+    <div class = "forms">
+        <img class="mb-4" src="../public/img/p.jpg" alt="">
+        <div class="form">
+            <form class="login_form" name="form" target="main.html">
+                <h3 id="user_detail">The Account Login</h3>
+                <div class="form_box">
+                    <div class="box">
+                        <img src="../public/img/account.png" alt="email">
+                        <label for="inputEmail" class="sr-only">Email address</label>
+                        <input type="email" id="inputEmail" class="form_control" placeholder="email address" required autofocus name="email" value="test@test.com">
+                    </div>
+                </div>
+                <div class="form_box">
+                    <div class="box">
+                        <img src="../public/img/password.png" alt="name">
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" id="inputPassword" class="form_control" placeholder="name" required autofocus name="password" value="000000">
+                    </div>
+                </div>
+                <div class="update_button">
+                    <button type="submit" class="button_submit" data-loading-text="loading" onclick="linkNewProject()" name="submit">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
