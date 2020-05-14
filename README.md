@@ -14,11 +14,11 @@ _"We are here to develop an End-To-End System to help students to survive their 
 
 ### Group members
 
-|                         Ruoyan                          |                         Huiyu                         |                        Zhen Fan                         |                      Matteo Lecca                       |                        Zaim Zazali                         |
-| :-----------------------------------------------------: | :---------------------------------------------------: | :-----------------------------------------------------: | :-----------------------------------------------------: | :--------------------------------------------------------: |
-|                         ix19849                         |                        pj19174                        |                         cc19055                         |                         qg19551                         |                          gv19698                           |
-|                     Web Application                     |                    Web Application                    |                       IoT Device                        |                   Standalone Software                   |                          Back-End                          |
-| <img src="./readme_assets/pic_default.png" width="150"> | <img src="./readme_assets/pic_huiyu.png" width="150"> | <img src="./readme_assets/pic_default.png" width="150"> | <img src="./readme_assets/pic_default.png" width="150"> | <img src="./readme_assets/pic_zaimzazali.png" width="150"> |
+|                         Ruoyan                         |                         Huiyu                         |                        Zhen Fan                         |                      Matteo Lecca                       |                        Zaim Zazali                         |
+| :----------------------------------------------------: | :---------------------------------------------------: | :-----------------------------------------------------: | :-----------------------------------------------------: | :--------------------------------------------------------: |
+|                        ix19849                         |                        pj19174                        |                         cc19055                         |                         qg19551                         |                          gv19698                           |
+|                    Web Application                     |                    Web Application                    |                       IoT Device                        |                   Standalone Software                   |                          Back-End                          |
+| <img src="./readme_assets/pic_ruoyan.png" width="150"> | <img src="./readme_assets/pic_huiyu.png" width="150"> | <img src="./readme_assets/pic_default.png" width="150"> | <img src="./readme_assets/pic_default.png" width="150"> | <img src="./readme_assets/pic_zaimzazali.png" width="150"> |
 
 ---
 
@@ -90,6 +90,12 @@ The whole system would be involving different kind of products with different of
 >
 > <br>
 >
+> <p align="center">
+>  <img src="./readme_assets/SD_Software.png" width="550">
+> </p>
+>
+> <br>
+>
 > Product : **Web Application** <br>
 > User : **Lecturers** <br><br>
 > Functionalities :-
@@ -101,6 +107,12 @@ The whole system would be involving different kind of products with different of
 >
 > <br>
 >
+> <p align="center">
+>  <img src="./readme_assets/SD_Web.png" width="550">
+> </p>
+>
+> <br>
+>
 > Product : **IoT Device (M5 Stack)** <br>
 > User : **Students** <br><br>
 > Functionalities :-
@@ -109,10 +121,16 @@ The whole system would be involving different kind of products with different of
 > 2. From the device, the student could view the list of projects together with the project details.
 > 3. If there is a project that meet the student's interest, the student could book the topic and wait for the approval from the lecturer who posted the topic.
 > 4. While there is no confirmed student that booked the topic, any students could book the topic and express their interests for it, until the topic is confirmed.
+>
+> <br>
+>
+> <p align="center">
+>  <img src="./readme_assets/SD_IoT.png" width="550">
+> </p>
 
 <br>
+
 To sum everything up, below is a story which will give you an idea on how these products would complement each other forming an end-to-end system.
-<br><br>
 
 > There are two best friends, Adam and George, who are currently studying for MSc Computer Science at the University of Bristol. The length of the masters programme is one year, and it is splitted into several blocks such as Teaching Block 1 (TB1), Teaching Block 2 (TB2), and a Dissertation which will be happening in the Summer Vacation period. <br><br>
 > During TB2, all of the MSc Computer Science students are asked to either propose their own idea for the Dissertation, or simply choose one of the topics listed by the Computer Science department. By using the M5 Stack device, every student can log into the device by using their own university credentials. Thus, Adam and George both logged into the M5 Stack to see what's on the system. <br><br>
@@ -197,15 +215,41 @@ Below is the simplest practical model design and currently in use for this parti
 
 #### Web Technologies
 
-<br>
+In order to let lecturers send projects id, name and details online, which can be received by students’ M5 stack, the web side should meet the requirements of uploading new project, modifying original projects and saving these projects. Firstly, the client side is designed by HTML and CSS, which completes the needs of this system for the frame and look of the webpage.
+
+And then, in server side, using node.js to get the original projects stored in JSON file so that the lecturer can intuitively understand the project information which they have submitted and modify the content of these projects. Meanwhile, saving the project list in JSON file, which can be deleted and inserted.
+
+Overall, although the client side is designed easily and firstly to visualize the webpage, it also needs be changed to interact with the server side to achieve the goal.
+
+---
 
 ### System Implementation
 
-We have initially splitted this ambitious idea into several smaller chunks in order to fully realise it. It would require few more sprints in order to deploy the three products with the full features and functionalities. However, due to time constraints, we only managed to undergo two times of the full software development life cycle, or simply with two Sprints. With this two Sprints, we managed to produce two versions of the Minimum Viable Products (MVPs).
+#### Project Sprints Breakdown
 
-Below is the visualisation of the project miletone :-
+We have initially splitted this ambitious idea into several smaller chunks in order to fully realise it. It would require few more sprints in order to deploy the three products with the full features and functionalities. However, due to time constraints, we only managed to undergo three times of the full software development life cycle, or simply with three Sprints. With these Sprints, we managed to produce two versions of the Minimum Viable Products (MVPs).
+
+Below is the visualisation of the project milestone :-
+
+<p align="center">
+  <img src="./readme_assets/sprints.png" width="1500">
+</p>
+
+#### Project Design Evaluation
+
+#### Social and Ethical Implications
+
+---
 
 ### Project Evaluation
+
+#### Project Success
+
+#### Future Work
+
+#### Work Practices
+
+#### How Coronavirus has affected our Project?
 
 ---
 
@@ -214,3 +258,5 @@ Below is the visualisation of the project miletone :-
 1. https://csijh.gitlab.io/COMSM1401/ - Example projects from previous years
 2. https://help.github.com/en/github - GitHub.com Help Documentation
 3. https://csijh.gitlab.io/COMSM0104/ - Web Technologies (COMSM0104)
+4. https://getbootstrap.com/docs/4.1/getting-started/introduction/ - Bootstrap's Documentation
+5. https://aws.amazon.com/rds/features/security/ - Amazon RDS Security
