@@ -143,6 +143,56 @@ To sum everything up, below is a story which will give you an idea on how these 
 
 <br>
 
+#### Evolution of UI Wireframes
+
+Initially, our team had done the **Paper Prototyping** to come out with the User Interface (UI) ideas. It is a technique to create a hand-drawings UI wireframes which allow them to be designed, simulated, and tested rapidly. It is a good method during the brainstorming session that enable us to evaluate our designs with the User Experience (UX) feedbacks.
+
+With the drawn ideas, we had transformed them into the real UI as below :-
+
+> Product : **Standalone Software** <br>
+>
+> |                                  Overview                                  |
+> | :------------------------------------------------------------------------: |
+> | <img src="./readme_assets/screenshots_software/overview.jpg" width="1000"> |
+>
+> |                                  Search Student                                  |
+> | :------------------------------------------------------------------------------: |
+> | <img src="./readme_assets/screenshots_software/search_student.png" width="1000"> |
+>
+> |                                   Select Student                                   |
+> | :--------------------------------------------------------------------------------: |
+> | <img src="./readme_assets/screenshots_software/student_selected.png" width="1000"> |
+>
+> |                                  Filter Student Project                                  |
+> | :--------------------------------------------------------------------------------------: |
+> | <img src="./readme_assets/screenshots_software/filter_studend_project.png" width="1000"> |
+>
+> <br>
+>
+> Product : **Web Application** <br>
+>
+> |                               Login                                |
+> | :----------------------------------------------------------------: |
+> | <img src="./readme_assets/screenshots_web/login.png" width="1000"> |
+>
+> |                              Project Listing                              |
+> | :-----------------------------------------------------------------------: |
+> | <img src="./readme_assets/screenshots_web/project_list.png" width="1000"> |
+>
+> |                          Publish a Topic                           |
+> | :----------------------------------------------------------------: |
+> | <img src="./readme_assets/screenshots_web/index.png" width="1000"> |
+>
+> |                               Message                                |
+> | :------------------------------------------------------------------: |
+> | <img src="./readme_assets/screenshots_web/success.png" width="1000"> |
+>
+> <br>
+>
+> Product : **IoT Device (M5 Stack)** <br>
+
+<br>
+
 #### Communication Protocol
 
 There are several protocols used, experienced, and included during the development phase for this project, and to connect the products or devices to one another.
@@ -210,56 +260,6 @@ Below is the simplest practical model design and currently in use for this parti
 > 1. It SELECT the 'view_projects' view and displays the project list.
 > 2. It INSERT the data into the 'student_project' table once the student booked a particular topic.
 > 3. It UPDATE the 'isAvailable' attribute in the 'final_projects' table to 'false' once a student confirmed the topic.
-
-<br>
-
-#### Evolution of UI Wireframes
-
-Initially, our team had done the **Paper Prototyping** to come out with the User Interface (UI) ideas. It is a technique to create a hand-drawings UI wireframes which allow them to be designed, simulated, and tested rapidly. It is a good method during the brainstorming session that enable us to evaluate our designs with the User Experience (UX) feedbacks.
-
-With the drawn ideas, we had transformed them into the real UI as below :-
-
-> Product : **Standalone Software** <br>
->
-> |                                  Overview                                  |
-> | :------------------------------------------------------------------------: |
-> | <img src="./readme_assets/screenshots_software/overview.jpg" width="1000"> |
->
-> |                                  Search Student                                  |
-> | :------------------------------------------------------------------------------: |
-> | <img src="./readme_assets/screenshots_software/search_student.png" width="1000"> |
->
-> |                                   Select Student                                   |
-> | :--------------------------------------------------------------------------------: |
-> | <img src="./readme_assets/screenshots_software/student_selected.png" width="1000"> |
->
-> |                                  Filter Student Project                                  |
-> | :--------------------------------------------------------------------------------------: |
-> | <img src="./readme_assets/screenshots_software/filter_studend_project.png" width="1000"> |
->
-> <br>
->
-> Product : **Web Application** <br>
->
-> |                               Login                                |
-> | :----------------------------------------------------------------: |
-> | <img src="./readme_assets/screenshots_web/login.png" width="1000"> |
->
-> |                              Project Listing                              |
-> | :-----------------------------------------------------------------------: |
-> | <img src="./readme_assets/screenshots_web/project_list.png" width="1000"> |
->
-> |                          Publish a Topic                           |
-> | :----------------------------------------------------------------: |
-> | <img src="./readme_assets/screenshots_web/index.png" width="1000"> |
->
-> |                               Message                                |
-> | :------------------------------------------------------------------: |
-> | <img src="./readme_assets/screenshots_web/success.png" width="1000"> |
->
-> <br>
->
-> Product : **IoT Device (M5 Stack)** <br>
 
 <br>
 
