@@ -1,8 +1,0 @@
-{
-  "projects": [
-    {"id": 1, "name": "Design a database", "detail":"it is difficult...", "students": "Robotics", "status": "available", "file": "uploaded", "modify": "delete"},
-    {"id": 2, "name": "Create a system for computing", "detail":"it is hardly difficult...", "students": "Advance Computing", "status": "not available", "file": "uploaded", "modify": "delete"},
-    {"id": 3, "name": "Develop an Amazon Alexa Skill", "detail":"it is easier...", "students": "Computer Science (Conversion)", "status": "available", "file": "not uploaded", "modify": "delete"},
-    {"id": 4, "name": "Summarize reference", "detail":"it is comlicate...", "students": "All", "status": "available", "file": "uploaded", "modify": "delete"}
-  ]
-}
