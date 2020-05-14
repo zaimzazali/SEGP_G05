@@ -187,7 +187,7 @@ With the drawn ideas, we had transformed them into the real UI as below :-
 > | :------------------------------------------------------------------: |
 > | <img src="./readme_assets/screenshots_web/success.png" width="1000"> |
 >
-> |                     Update their Credentials                      |
+> |                   Update Lecturers' Credentials                   |
 > | :---------------------------------------------------------------: |
 > | <img src="./readme_assets/screenshots_web/user.png" width="1000"> |
 >
