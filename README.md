@@ -309,7 +309,7 @@ To have a robust evaluation, our team had combined two different techniques that
 >
 > Thus, we could say that the effectiveness of these approaches would be highly dependent on the individual's exposure. Some people might be giving the uncorrelated feedbacks with 'what they believed' and 'what they should be doing' as they came up with a biased expectation and experience in their mind, to begin with.
 >
-> Nevertheless, any feedback would be a priceless view when it comes to the product enhancements as no feedback would a worthless feedback as long as you know how to interpret it make use of it, properly. Besides, this is what the 'Customer-Centric' strategy is all about. It is **not** about what you can build, but it **will always** be about what you can do to help the community around you.
+> Nevertheless, any feedback would be a priceless view when it comes to the product enhancements as no feedback would a worthless feedback as long as you know how to interpret it make use of it, properly. Besides, this is what the **'Customer-Centric'** strategy is all about. It is **not** about what you can build, but it **will always** be about what you can do to help the community around you.
 
 #### Social and Ethical Implications
 
