@@ -18,7 +18,7 @@ _"We are here to develop an End-To-End System to help students to survive their 
 | :----------------------------------------------------: | :---------------------------------------------------: | :-----------------------------------------------------: | :-----------------------------------------------------: | :--------------------------------------------------------: |
 |                        ix19849                         |                        pj19174                        |                         cc19055                         |                         qg19551                         |                          gv19698                           |
 |                    Web Application                     |                    Web Application                    |                       IoT Device                        |                   Standalone Software                   |                          Back-End                          |
-| <img src="./readme_assets/pic_ruoyan.png" width="150"> | <img src="./readme_assets/pic_huiyu.png" width="150"> | <img src="./readme_assets/pic_default.png" width="150"> | <img src="./readme_assets/pic_default.png" width="150"> | <img src="./readme_assets/pic_zaimzazali.png" width="150"> |
+| <img src="./readme_assets/pic_ruoyan.png" width="150"> | <img src="./readme_assets/pic_huiyu.png" width="150"> | <img src="./readme_assets/pic_fan.png" width="150"> | <img src="./readme_assets/pic_default.png" width="150"> | <img src="./readme_assets/pic_zaimzazali.png" width="150"> |
 
 ---
 
