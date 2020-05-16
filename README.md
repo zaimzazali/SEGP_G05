@@ -54,7 +54,7 @@ The development team has been splitted into several Agile Pods which based on fu
 
 <p align="center">
   <img src="./readme_assets/agile_pods.png" width="700">
-  <p style="text-align:center; font-weight:500;">Figure 1: Agile Pods</p>
+  <p>Figure 1: Agile Pods</p>
 </p>
 
 <p align="center">
