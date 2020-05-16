@@ -53,13 +53,7 @@ _"We are here to develop an End-To-End System to help students to survive their 
 The development team has been splitted into several Agile Pods which based on function group illustrated as below :-
 
 <p align="center">
-  <img src="./readme_assets/agile_pods.png" width="700">
-  <p>Figure 1: Agile Pods</p>
-  <a href="#">Link 2</a>
-</p>
-
-<p align="center">
-  <img src="http://s.4cdn.org/image/title/105.gif">
+  <img src="./readme_assets/agile_pods.png" width="700"> <br>
   <b>Figure 1: Agile Pods</b>
 </p>
 
@@ -108,8 +102,8 @@ Sub-sections below will explain on the system itself in more detail.
 Below is the overview architecture of the entire system.
 
 <p align="center">
-  <img src="./readme_assets/system_arch.png" width="600">
-  <p style="text-align:center; font-weight:500;">Figure 2: System Architecture</p>
+  <img src="./readme_assets/system_arch.png" width="600"> <br>
+  <b>Figure 2: System Architecture</b>
 </p>
 
 The whole system would be involving different kind of products with different functionalities. Each of the product would be connected to the Amazon Web Services (AWS) database through the Relational Database Service (RDS).
@@ -130,8 +124,8 @@ User : **Schools / Departments**
 <br>
 
 <p align="center">
-  <img src="./readme_assets/SD_Software.png" width="550">
-  <p style="text-align:center; font-weight:500;">Figure 3: Sequence Diagram between User & Standalone Software</p>
+  <img src="./readme_assets/SD_Software.png" width="550"> <br>
+  <b>Figure 3: Sequence Diagram between User & Standalone Software</b>
 </p>
 
 ### 2) Web Application
@@ -146,8 +140,8 @@ User : **Lecturers**
 <br>
 
 <p align="center">
-  <img src="./readme_assets/SD_Web.png" width="550">
-  <p style="text-align:center; font-weight:500;">Figure 4: Sequence Diagram between User & Web Application</p>
+  <img src="./readme_assets/SD_Web.png" width="550"> <br>
+  <b>Figure 4: Sequence Diagram between User & Web Application</b>
 </p>
 
 ### 3) IoT Device (M5 Stack)
@@ -162,8 +156,8 @@ User : **Students**
 <br>
 
 <p align="center">
-  <img src="./readme_assets/SD_IoT.png" width="550">
-  <p style="text-align:center; font-weight:500;">Figure 5: Sequence Diagram between User & M5 Stack</p>
+  <img src="./readme_assets/SD_IoT.png" width="550"> <br>
+  <b>Figure 5: Sequence Diagram between User & M5 Stack</b>
 </p>
 
 <br>
@@ -179,7 +173,9 @@ To sum everything up, below is a story which will give you an idea on how these 
 > As the story covers the Students' and Lecturers' parts, it will now cover the usage of the Standalone Software. The software is installed on the premise systems or computers, that is on the Person-In-Charge (PIC) workstation, who is responsible to monitor the Final Project allocations. The person would need to log into the software to access it. <br><br>
 > The very first panel that will be shown is a dashboard panel which will display the count of the available project topics, total number of students, total number of students who have secured a topic, and total number of students who do not have any topic to begin their Dissertation. With the data, the PIC can plan the next steps to tackle any anticipated issues, such as limited number of project topics to cater any supports to students who are struggling to find a topic for their Dissertation (such as George). Of course, the PIC will also have the accessibility of the project details and other administration matters.
 
-<p style="text-align:center; font-weight:500;">Blockquote 1: Ideal Process Flow of the System</p>
+<p align="center">
+  <b>Blockquote 1: Ideal Process Flow of the System</b>
+</p>
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
 
@@ -215,6 +211,10 @@ There are several protocols used, experienced, and included during the developme
 | Hyper Text Transfer Protocol (HTTP) **\*\***         | To establish a connection with the Server to transfer the webpage documents to other systems or client machines that requested it. |
 | Hyper Text Transfer Protocol Secure (HTTPS) **\*\*** | If the web platform is hosted properly on the Cloud, it is always good (a must) to secure the connection in an encrypted format.   |
 
+<p align="center">
+  <b>Table 1: Protocols and their Usage</b>
+</p>
+
 _\*\* These are the protocols used during the development and testing. However, due to time constraints, the implementations of these protocols were halted and revoked as they would make the prototype unstable to demonstrate._
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
@@ -233,12 +233,20 @@ Below is the **'viewer'** account with the superbly very limited privileges _(on
 > Username : viewer <br>
 > Password : tester <br>
 
+<p align="center">
+  <b>Blockquote 2: Viewer Account Credential</b>
+</p>
+
 Amazon RDS provides an essential features in order to ensure the data stored through their services is stored and accessed securely. It provides a network-level isolation by using the Amazon Virtual Private Cloud (VPC), and Internet Protocol (IP) addresses filteration in order to control the connections back and forth the database. Moreover, it provides an encryption of data at rest and in transit. However, some of the features would come by default and some would be requiring some extra configurations.
 
 | Data Encryption | Approach                                                                                                                                                    |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | At Rest         | Data stored in the storage is encrypted by using the industry standard of AES-256 encryption algorithm.                                                     |
 | In Transit      | It encrypts the communications between the applications and the database instance by using the Secure Sockets Layer (SSL) / Transport Layer Security (TLS). |
+
+<p align="center">
+  <b>Table 2: Data Encryption Types</b>
+</p>
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
 
@@ -249,8 +257,8 @@ Amazon RDS provides an essential features in order to ensure the data stored thr
 Below is the simplest practical model design and currently in use for this particular project at this particular sprint. With more sprints ahead, it would be scaled up to meet the full fledge system requirements. It shows how the data would relate to one another and portrays the relationship of the real world entities.
 
 <p align="center">
-  <img src="./readme_assets/dbeaver_model.png" width="900">
-  <p style="text-align:center; font-weight:500;">Figure X: Database Schema Structure</p>
+  <img src="./readme_assets/dbeaver_model.png" width="900"> <br>
+  <b>Figure X: Database Schema Structure</b>
 </p>
 
 <br>
@@ -301,8 +309,8 @@ We have initially splitted this ambitious idea into several smaller chunks in or
 Below is the visualisation of the project milestone :-
 
 <p align="center">
-  <img src="./readme_assets/sprints.png" width="1500">
-  <p style="text-align:center; font-weight:500;">Figure X: Sprints Overview</p>
+  <img src="./readme_assets/sprints.png" width="1500"> <br>
+  <b>Figure X: Sprints Overview</b>
 </p>
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
