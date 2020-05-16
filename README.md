@@ -187,24 +187,17 @@ Initially, our team had done the **Paper Prototyping** to come out with the User
 
 _Play the video below to see our very first wireframe design through the Paper Prototyping!_
 
-<a href="https://youtu.be/SyWbbBR-k84" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
-
 <p align="center">
-  <video width="720" controls>
-    <source src="./readme_assets/videos/vid_01.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-  </video>
-</p>
-
-<p align="center">
-  [[](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/SyWbbBR-k84) <br>
+  <a href="https://youtu.be/SyWbbBR-k84" target="_blank"><img src="./readme_assets/dummy_videos/cover_1.png" 
+  alt="Ideal Process Flow of the System" width="720" border="100" /></a> <br>
   <b>Video 1: Ideal Process Flow of the System</b>
 </p>
 
 Next, to get the real feeling of using the 'Software' or 'Product', we had transformed the ideas from papers into a **Processing** application!
 
 <p align="center">
+  <a href="https://youtu.be/nwihMnmqMyM" target="_blank"><img src="./readme_assets/dummy_videos/cover_2.png" 
+  alt="Prototyping by using Processing" width="720" border="100" /></a> <br>
   <b>Video 2: Prototyping by using Processing</b>
 </p>
 
