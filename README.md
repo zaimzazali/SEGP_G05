@@ -42,11 +42,11 @@ _"We are here to develop an End-To-End System to help students to survive their 
 
 #### Group Members
 
-|                         Ruoyan                         |                         Huiyu                         |                      Zhen Fan                       |                      Matteo Lecca                       |                        Zaim Zazali                         |
-| :----------------------------------------------------: | :---------------------------------------------------: | :-------------------------------------------------: | :-----------------------------------------------------: | :--------------------------------------------------------: |
-|                        ix19849                         |                        pj19174                        |                       cc19055                       |                         qg19551                         |                          gv19698                           |
-|                    Web Application                     |                    Web Application                    |                     IoT Device                      |                   Standalone Software                   |                          Back-End                          |
-| <img src="./readme_assets/pic_ruoyan.png" width="150"> | <img src="./readme_assets/pic_huiyu.png" width="150"> | <img src="./readme_assets/pic_fan.png" width="150"> | <img src="./readme_assets/pic_default.png" width="150"> | <img src="./readme_assets/pic_zaimzazali.png" width="150"> |
+|                                 Ruoyan                                  |                                 Huiyu                                  |                               Zhen Fan                               |                               Matteo Lecca                               |                                 Zaim Zazali                                 |
+| :---------------------------------------------------------------------: | :--------------------------------------------------------------------: | :------------------------------------------------------------------: | :----------------------------------------------------------------------: | :-------------------------------------------------------------------------: |
+|                                 ix19849                                 |                                pj19174                                 |                               cc19055                                |                                 qg19551                                  |                                   gv19698                                   |
+|                             Web Application                             |                            Web Application                             |                              IoT Device                              |                           Standalone Software                            |                                  Back-End                                   |
+| <img src="./readme_assets/profile_pictures/pic_ruoyan.png" width="150"> | <img src="./readme_assets/profile_pictures/pic_huiyu.png" width="150"> | <img src="./readme_assets/profile_pictures/pic_fan.png" width="150"> | <img src="./readme_assets/profile_pictures/pic_default.png" width="150"> | <img src="./readme_assets/profile_pictures/pic_zaimzazali.png" width="150"> |
 
 #### How We Operate
 
@@ -91,7 +91,7 @@ Below are the products and their respective users :-
 2. **Web Application** - _Lecturers_
 3. **IoT Device** - _Students_
 
-Sub-sections below will explain on the system itself in more detail.
+The following sub-sections will explain on the system itself in more detail.
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
 
@@ -186,6 +186,26 @@ To sum everything up, below is a story which will give you an idea on how these 
 Initially, our team had done the **Paper Prototyping** to come out with the User Interface (UI) ideas. It is a technique to create a hand-drawings UI wireframes which allow them to be designed, simulated, and tested rapidly. It is a good method during the brainstorming session that enable us to evaluate our designs with the User Experience (UX) feedbacks.
 
 _Play the video below to see our very first wireframe design through the Paper Prototyping!_
+
+<p align="center">
+<iframe width="560" height="315"
+src="./readme_assets/videos/vid_01.mp4"
+frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe><br>
+  <b>Video 1: Ideal Process Flow of the System</b>
+</p>
+
+Next, to get the real feeling of using the 'Software' or 'Product', we had transformed the ideas from papers into a **Processing** application!
+
+<p align="center">
+<iframe width="560" height="315"
+src="./readme_assets/videos/vid_02.mp4"
+frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe><br>
+  <b>Video 2: Prototyping by using Processing</b>
+</p>
 
 With the drawn ideas, we had transformed them into the real UI as below :-
 
