@@ -59,12 +59,8 @@ The development team has been splitted into several Agile Pods which based on fu
 </p>
 
 <p align="center">
-  <b>Some Links:</b><br>
-  <a href="#">Link 1</a> |
-  <a href="#">Link 2</a> |
-  <a href="#">Link 3</a>
-  <br><br>
   <img src="http://s.4cdn.org/image/title/105.gif">
+  <b>Figure 1: Agile Pods</b>
 </p>
 
 With the limited number of man-powers and resources, the mobility for each of the project members is highly encouraged among one team to another. This would promote a rotational job scope and give exposures to project members with broaden views and different tasks and perspectives. Nevertheless, each individual main scope would be showned in the section of 'Group members' above.
