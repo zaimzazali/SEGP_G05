@@ -185,7 +185,7 @@ To sum everything up, below is a story which will give you an idea on how these 
 
 Initially, our team had done the **Paper Prototyping** to come out with the User Interface (UI) ideas. It is a technique to create a hand-drawings UI wireframes which allow them to be designed, simulated, and tested rapidly. It is a good method during the brainstorming session that enable us to evaluate our designs with the User Experience (UX) feedbacks.
 
-_Play the video below to see our very first wireframe design through the Paper Prototyping!_
+Play the video below to see our very first wireframe design through the **Paper Prototyping**!
 
 <p align="center">
   <a href="https://youtu.be/SyWbbBR-k84" target="_blank"><img src="./readme_assets/dummy_videos/cover_1.png" 
