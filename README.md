@@ -205,15 +205,27 @@ With the drawn ideas, we had transformed them into the real UI as below :-
 
 #### 1) Standalone Software [(Read Product Description)](#1-Standalone-Software)
 
+<p align="center">
+  <a href="https://youtu.be/" target="_blank"><img src="./readme_assets/dummy_videos/cover_not_ready.png" 
+  alt="Standalone Software Demonstration" width="720" border="100" /></a> <br>
+  <b>Video 3: Standalone Software Demonstration</b>
+</p>
+
 #### 2) Web Application [(Read Product Description)](#2-Web-Application)
 
 <p align="center">
   <a href="https://youtu.be/eFEixQTvmS0" target="_blank"><img src="./readme_assets/dummy_videos/cover_3.png" 
   alt="Web Application Demonstration" width="720" border="100" /></a> <br>
-  <b>Video 3: Web Application Demonstration</b>
+  <b>Video 4: Web Application Demonstration</b>
 </p>
 
 #### 3) IoT Device (M5 Stack) [(Read Product Description)](#3-IoT-Device-M5-Stack)
+
+<p align="center">
+  <a href="https://youtu.be/" target="_blank"><img src="./readme_assets/dummy_videos/cover_not_ready.png" 
+  alt="M5 Stack Demonstration" width="720" border="100" /></a> <br>
+  <b>Video 5: M5 Stack Demonstration</b>
+</p>
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
 
@@ -310,7 +322,7 @@ Below is the database accessibilities for each products :-
 
 #### Web Technologies
 
-In order to let lecturers send projects id, name and details online, which can be received by students’ M5 stack, the web side should meet the requirements of uploading new project, modifying original projects and saving these projects. Firstly, the client side is designed by HTML and CSS, which completes the needs of this system for the frame and look of the webpage.
+In order to let lecturers send projects id, name and details online, which can be received by students’ M5 Stack, the web side should meet the requirements of uploading new project, modifying original projects and saving these projects. Firstly, the client side is designed by HTML and CSS, which completes the needs of this system for the frame and look of the webpage.
 
 And then, in server side, using node.js to get the original projects stored in JSON file so that the lecturer can intuitively understand the project information which they have submitted and modify the content of these projects. Meanwhile, saving the project list in JSON file, which can be deleted and inserted.
 
