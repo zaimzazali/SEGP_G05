@@ -290,7 +290,7 @@ Below is the simplest practical model design and currently in use for this parti
 
 <p align="center">
   <img src="./readme_assets/dbeaver_model.png" width="900"> <br>
-  <b>Figure X: Database Schema Structure</b>
+  <b>Figure 6: Database Schema Structure</b>
 </p>
 
 <br>
@@ -342,7 +342,7 @@ Below is the visualisation of the project milestone :-
 
 <p align="center">
   <img src="./readme_assets/sprints.png" width="1500"> <br>
-  <b>Figure X: Sprints Overview</b>
+  <b>Figure 7: Sprints Overview</b>
 </p>
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
@@ -402,7 +402,8 @@ Nevertheless, any feedback would be a priceless view when it comes to the produc
 <br>
 
 #### How Coronavirus has affected our Project?
-From the end of 2019 until now, the impact of the Corona Virus Disease 2019 (COVID 19) has become more and more serious and intense. So the face-to-face meeting had to be cancelled, which has affected the development and implementation of our projects. Firstly, the three parts of this projects including Web Application, Standalone Software and IoT Device, has to be divided to different group members, instead of all working together, which result in a lack of connection between each part. 
+
+From the end of 2019 until now, the impact of the Corona Virus Disease 2019 (COVID 19) has become more and more serious and intense. So the face-to-face meeting had to be cancelled, which has affected the development and implementation of our projects. Firstly, the three parts of this projects including Web Application, Standalone Software and IoT Device, has to be divided to different group members, instead of all working together, which result in a lack of connection between each part.
 
 Secondly, communication between group members can only be used on Whatsapp and instruction by teachers can only be used on Jitsi Meet, which cause misunderstanding the meanings of each other in the communication process.
 
