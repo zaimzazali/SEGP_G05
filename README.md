@@ -207,6 +207,12 @@ With the drawn ideas, we had transformed them into the real UI as below :-
 
 #### 2) Web Application [(Read Product Description)](#2-Web-Application)
 
+<p align="center">
+  <a href="https://youtu.be/eFEixQTvmS0" target="_blank"><img src="./readme_assets/dummy_videos/cover_3.png" 
+  alt="Web Application Demonstration" width="720" border="100" /></a> <br>
+  <b>Video 3: Web Application Demonstration</b>
+</p>
+
 #### 3) IoT Device (M5 Stack) [(Read Product Description)](#3-IoT-Device-M5-Stack)
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
