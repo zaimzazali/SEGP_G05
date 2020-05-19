@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../public/img/p.jpg" alt="project-logo">
@@ -11,7 +12,7 @@
     <title>project list</title>
     <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="../public/css/main.css" rel="stylesheet">
-    <script src="../public/js/link.js"></script>
+
 </head>
 
 <body>
@@ -28,9 +29,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" onclick="linkNewProject()">New Project</a></li>
-                <li><a href="#" onclick="linkUser()">User</a></li>
-                <li><a href="#" onclick="linkProjectList()">Project List</a></li>
+                <li><a href="/students/index">New Project</a></li>
+                <li><a href="/students/user" >User</a></li>
+                <li><a href="/students" >Project List</a></li>
             </ul>
         </div>
     </div>
@@ -61,7 +62,10 @@
                         <td>{{ $value.students }}</td>
                         <td>{{ $value.status }}</td>
                         <td>{{ $value.file }}</td>
-                        <td>{{ $value.modify }}</td>
+                        <td>
+                            <a href="/students/edit?id={{$value.id}}">Edit</a>
+                            <a href="/students/delete?id={{$value.id}}">Delete</a>
+                        </td>
                     </tr>
                     {{ /each }}
                     </tbody>
