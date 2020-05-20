@@ -6,6 +6,7 @@
 #include <WiFiType.h>
 #include <esp_wifi.h>
 
+// show wifi connection in the header
 class Header {
 public:
   Header() {};
@@ -20,21 +21,50 @@ public:
     return x + M5.Lcd.textWidth(src);
   }
 
-  void draw()
+  String wifiStatus(wl_status_t src) {
+    switch (src)
     {
-      M5.Lcd.setTextFont(0);
-      M5.Lcd.setTextFont(font);
-      M5.Lcd.setTextSize(1);
-      M5.Lcd.setTextColor(colorFont, colorFill);
-      M5.Lcd.drawFastHLine(0, 8, M5.Lcd.width(), 0xC618);
-
-      int x = 0;
-
-      x = drawStr("Hello ", x);
-      M5.Lcd.setCursor(M5.Lcd.width() - 96, 0);
-      M5.Lcd.printf("Free%7d Byte", esp_get_free_heap_size());
-      M5.Lcd.fillRect(x, 0, M5.Lcd.width() - 96-x, 8, colorFill);
+    case WL_IDLE_STATUS    : return "IDLE_STATUS";
+    case WL_NO_SSID_AVAIL  : return "NO_SSID_AVAIL";
+    case WL_SCAN_COMPLETED : return "SCAN_COMPLETED";
+    case WL_CONNECTED      : return ""; // CONNECTED";
+    case WL_CONNECT_FAILED : return "CONNECT_FAILED";
+    case WL_CONNECTION_LOST: return "CONNECTION_LOST";
+    case WL_DISCONNECTED   : return "DISCONNECTED";
     }
+    return "";
+  }
+
+  void draw()
+  {
+    M5.Lcd.setTextFont(0);
+    M5.Lcd.setTextFont(font);
+    M5.Lcd.setTextSize(1);
+    M5.Lcd.setTextColor(colorFont, colorFill);
+    M5.Lcd.drawFastHLine(0, 8, M5.Lcd.width(), 0xC618);
+
+    int x = 0;
+
+    wifi_mode_t mode;
+    esp_wifi_get_mode(&mode);
+    if (mode == WIFI_AP || mode == WIFI_AP_STA) {
+      x = drawStr("AP:", x);
+      x = drawStr(WiFi.softAPIP().toString(), x);
+      x = drawStr(" ", x);
+    }
+    if (mode == WIFI_STA || mode == WIFI_AP_STA) {
+      wl_status_t s = WiFi.status();
+      x = drawStr(wifiStatus(s), x);
+      x = drawStr(" ", x);
+      if (s == WL_CONNECTED) {
+        x = drawStr(WiFi.localIP().toString(), x);
+        x = drawStr(" ", x);
+      }
+    }
+    M5.Lcd.setCursor(M5.Lcd.width() - 96, 0);
+    M5.Lcd.printf("Free%7d Byte", esp_get_free_heap_size());
+    M5.Lcd.fillRect(x, 0, M5.Lcd.width() - 96-x, 8, colorFill);
+  }
 };
 
 #endif
