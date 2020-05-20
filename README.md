@@ -432,7 +432,7 @@ Our team leader give us comprehensive information about project goal and support
 we set and communicate clear goals for all of our discussions and consistently follow those goals.
 we respect each other personally and in terms of expertise.
 we listen to each other by clarifying unclear points and asking appropriate questions during this development.
-we include all necessary team members in the decision making processes
+we include all necessary team members in the decision making processes.
 
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
