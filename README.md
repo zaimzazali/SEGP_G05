@@ -193,6 +193,8 @@ Play the video below to see our very first wireframe design through the **Paper 
   <b>Video 1: Ideal Process Flow of the System</b>
 </p>
 
+<br>
+
 Next, to get the real feeling of using the 'Software' or 'Product', we had transformed the ideas from papers into a **Processing** application!
 
 <p align="center">
@@ -201,8 +203,10 @@ Next, to get the real feeling of using the 'Software' or 'Product', we had trans
   <b>Video 2: Prototyping by using Processing</b>
 </p>
 
+<br>
+
 With the drawn ideas, we had transformed them into the real UI as below :- <br><br>
-**Note:** Below are the **product demonstration videos** for each of the developed products. It shows how our designs have evolved to enchance **User Experience** making it user-friendly to use.
+**Note:** _Below are the **product demonstration videos** for each of the developed products. It shows how our designs have evolved to enchance **User Experience** making it user-friendly to use._
 
 #### 1) Standalone Software [(Read Product Description)](#1-Standalone-Software)
 
@@ -212,6 +216,8 @@ With the drawn ideas, we had transformed them into the real UI as below :- <br><
   <b>Video 3: Standalone Software Demonstration</b>
 </p>
 
+<br>
+
 #### 2) Web Application [(Read Product Description)](#2-Web-Application)
 
 <p align="center">
@@ -219,6 +225,8 @@ With the drawn ideas, we had transformed them into the real UI as below :- <br><
   alt="Web Application Demonstration" width="720" border="100" /></a> <br>
   <b>Video 4: Web Application Demonstration</b>
 </p>
+
+<br>
 
 #### 3) IoT Device (M5 Stack) [(Read Product Description)](#3-IoT-Device-M5-Stack)
 
@@ -269,6 +277,8 @@ Below is the **'viewer'** account with the superbly very limited privileges _(on
 <p align="center">
   <b>Blockquote 2: Viewer Account Credential</b>
 </p>
+
+<br>
 
 Amazon RDS provides an essential features in order to ensure the data stored through their services is stored and accessed securely. It provides a network-level isolation by using the Amazon Virtual Private Cloud (VPC), and Internet Protocol (IP) addresses filteration in order to control the connections back and forth the database. Moreover, it provides an encryption of data at rest and in transit. However, some of the features would come by default and some would be requiring some extra configurations.
 
