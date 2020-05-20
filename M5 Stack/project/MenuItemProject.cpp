@@ -7,7 +7,9 @@ void MenuItemProject::onEnter() {
 }
 
 void MenuItemProject::onExit() {
+
   deleteItems();
+  // refresh screen
   M5.Lcd.fillRect(x, y, w, h, 0x0000);
 
   MenuItem::onExit();
@@ -18,6 +20,7 @@ void MenuItemProject::onAfterDraw() {
 }
 
 void MenuItemProject::fetchProjectData() {
+  // dummy data here
   String list[][4] = {{"School of Computer Science, Electrical and Electronic Engineering, and Engineering Mathematics",
                     "project_name_02",
                     "project_details_02",
@@ -33,7 +36,6 @@ void MenuItemProject::fetchProjectData() {
   deleteItems();
 
   int count = 2;
-  // M5.Lcd.drawString(String(x), 202,  10, 1);
 
   for (int i = 0; i < count; i++) {
     MenuItemProject* mi = new MenuItemProject(list[i][1]);
