@@ -404,16 +404,18 @@ Nevertheless, any feedback would be a priceless view when it comes to the produc
 <br>
 
 #### Social and Ethical Implications
-**Ethical implications**
-As the data stored into the database comprehend sensitive information of both students and lecturers, strict protocols for the protection from unauthorised access should be developed. Hardcoding the database password in the source code itself doesn't seem to be the best way to store this information. A plausible future implementation could be implementing a login page for each software so that only authorised users could access the data.  Also, each software developed has been designed to be used by different kind of users, i.e. standalone - university, web - lecturers, device - students, therefore the future protocols should take in account the presence of varying access levels. 
 
-**Social impact**
+#### Ethical implications
+
+As the data stored into the database comprehend sensitive information of both students and lecturers, strict protocols for the protection from unauthorised access should be developed. Hardcoding the database password in the source code itself doesn't seem to be the best way to store this information. A plausible future implementation could be implementing a login page for each software so that only authorised users could access the data. Also, each software developed has been designed to be used by different kind of users, i.e. standalone - university, web - lecturers, device - students, therefore the future protocols should take in account the presence of varying access levels.
+
+#### Social impact
+
 The current projects allocation system has been addressed as a source of stress for the majority of our colleagues, mainly because of the excel file provided that make difficult to navigate thru different projects. Therefore, providing a tool to help both students and lecturers to allocate their projects more efficiently, could very likely result in making student's university life more comfortable, therefore less stressful. Whereas, there is no evidence students would accept the system we deployed as a better, more user-friendly system compared to the current one. Further qualitative evaluation should be carried out on the network in order to prove it.
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
 
-<br>
----
+## <br>
 
 ### Project Evaluation
 
