@@ -20,55 +20,61 @@ Header header;
 
 String user = String("None");
 typedef std::vector<MenuItem*> vmi;
-int16_t fontNo = 1;
 
+// box line
 void drawFrame() {
   uint16_t sideColor = treeView.fontColor[0];
   Rect16 r = treeView.clientRect;
   r.inflate(1);
   M5.Lcd.drawRect(r.x -1, r.y, r.w +2, r.h, MenuItem::frameColor[1]);
   M5.Lcd.drawRect(r.x, r.y -1, r.w, r.h +2, MenuItem::frameColor[1]);
-  M5.Lcd.drawFastHLine(r.x+r.w+5, r.y+13, M5.Lcd.width()-r.x-r.w-6, MenuItem::frameColor[1]);
+  M5.Lcd.drawFastHLine(r.x+r.w+5, r.y+18, M5.Lcd.width()-r.x-r.w-8, MenuItem::frameColor[1]);
 }
 
-void drawCenterString(String s, int16_t x0, int16_t x1, int16_t y, int16_t f) {
-  // fontNo size 1 : 6*6
-  int16_t fontWidth = M5.Lcd.fontHeight(f)-2;
+// draw a string in the center of a textbox
+void drawCenterString(String s, int16_t x0, int16_t x1, int16_t y) {
+  String tx= "SSSSSSSSSS";
+  int16_t fontSize = (M5.Lcd.textWidth(tx)+9)/10;
   int16_t x;
   int16_t w = abs(x1-x0);
-  int length = fontWidth*s.length();
+  int length = M5.Lcd.textWidth(s);
   if (w > length) {  x = (x0+x1)/2-length/2; }
   else {
     x = x0;
-    s = s.substring(0, w/fontWidth);
+    s = s.substring(0, w/fontSize);
   }
   M5.Lcd.drawString(s, x, y, 1);
 }
 
-void drawDisplayData(std::vector<String> v, int16_t x, int16_t y, int16_t w, int16_t h, int16_t f) {
-  int16_t fontSize = M5.Lcd.fontHeight(f);
-  int fontW = fontSize-2;
-  int fontH = fontSize;
+// move cursor to next line when encouter the boundary
+void drawDisplayData(std::vector<String> v, int16_t x, int16_t y, int16_t w, int16_t h) {
+  String tx= "SSSSSSSSSS";
+  int fontW = (M5.Lcd.textWidth(tx)+9)/10;
+  int fontH = (fontW+2)*10/9;
   int row = h/fontH;
   int col = w/fontW;
   int len = v.size();
   int count = 0;
   int i = 0;
-  M5.Lcd.drawString(String(fontSize), 202, 2, fontNo);
+
   for (int j = 0; i < row && j < len; j++) {
 
     int size = v[j].length();
-    int insec = size/col;
     int start = 0;
-    for (int k = 0; k < insec && i < row; k++) {
+    while (start < size) {
+      int end = start+1;
+      while (end < size && M5.Lcd.textWidth(v[j].substring(start, end)) <= w){
+        end++;
+      }
 
-      M5.Lcd.drawString(v[j].substring(start, start+col), x, y+i*fontH, 1);
-      i += 1;
-      start += col;
-    }
-    if (start < size) {
-      M5.Lcd.drawString(v[j].substring(start), x, y+i*fontH, 1);
-      i += 1;
+      i ++;
+      if (end == size) {
+        M5.Lcd.drawString(v[j].substring(start, end), x, y+i*fontH, 1);
+        start = end;}
+      else {
+        M5.Lcd.drawString(v[j].substring(start, end-1), x, y+i*fontH, 1);
+        start = end-1;
+      }
     }
     if (i < row && j < len) {
       i++;
@@ -76,15 +82,59 @@ void drawDisplayData(std::vector<String> v, int16_t x, int16_t y, int16_t w, int
   }
 }
 
+// when call back, display username and info of project
 void CallBackProject(MenuItem* sender) {
   MenuItemProject* mi = static_cast<MenuItemProject*>(sender);
   Rect16 r = treeView.clientRect;
   if (!mi) { return; }
   if (!mi->isChild) { return; }
 
-  M5.Lcd.fillRect(r.x+r.w+5, r.y+15, M5.Lcd.width()-r.x-r.w-8, r.h-16, treeView.backColor[0]);
-  // drawCenterString(user, r.x+r.w+2+2, M5.Lcd.width()-2, r.y+2, fontNo);
-  drawDisplayData(mi->projectData, r.x+r.w+5, r.y+15, M5.Lcd.width()-r.x-r.w-8, r.h-16, fontNo);
+  M5.Lcd.fillRect(r.x+r.w+5, r.y+20, M5.Lcd.width()-r.x-r.w-8, r.h-16, treeView.backColor[0]);
+  drawCenterString(user, r.x+r.w+2+2, M5.Lcd.width()-2, r.y+2);
+  drawDisplayData(mi->projectData, r.x+r.w+5, r.y+20, M5.Lcd.width()-r.x-r.w-8, r.h-16);
+}
+
+void CallBackWiFi(MenuItem* sender)
+{
+  switch (sender->tag) {
+  default:     break;
+  case 2000:  WiFi.disconnect(true);  break;
+  case 2001:  WiFi.mode(WIFI_OFF);    break;
+  case 2002:  WiFi.mode(WIFI_STA);    break;
+  case 2003:  WiFi.mode(WIFI_AP);     break;
+  case 2004:  WiFi.mode(WIFI_AP_STA); break;
+  }
+}
+
+// connect wifi
+void CallBackWiFiClient(MenuItem* sender)
+{
+  MenuItemWiFiClient* mi = static_cast<MenuItemWiFiClient*>(sender);
+  if (!mi) return;
+
+  if (mi->ssid == "") return;
+
+  Preferences preferences;
+  preferences.begin("wifi-config");
+  preferences.putString("WIFI_SSID", mi->ssid);
+  String wifi_passwd = preferences.getString("WIFI_PASSWD");
+
+  if (mi->auth != WIFI_AUTH_OPEN) {
+    osk.swapBtnBC = treeView.swapBtnBC;
+    osk.setup(wifi_passwd);
+    while (osk.loop()) { delay(1); }
+    wifi_passwd = osk.getString();
+    osk.close();
+    WiFi.disconnect();
+    WiFi.begin(mi->ssid.c_str(), wifi_passwd.c_str());
+    preferences.putString("WIFI_PASSWD", wifi_passwd);
+  } else {
+    WiFi.disconnect();
+    WiFi.begin(mi->ssid.c_str(), "");
+    preferences.putString("WIFI_PASSWD", "");
+  }
+  preferences.end();
+  while (M5.BtnA.isPressed()) M5.update();
 }
 
 void CallBackStyle(MenuItem* sender)
@@ -103,7 +153,6 @@ void CallBackStyle(MenuItem* sender)
     treeView.itemHeight = 12;
     treeView.setFreeFont(&TomThumb);
     M5ButtonDrawer::setTextFont(1);
-    fontNo = 1;
     M5ButtonDrawer::height = 14;
     M5ButtonDrawer::width = 64;
     break;
@@ -118,7 +167,6 @@ void CallBackStyle(MenuItem* sender)
     treeView.backgroundColor = 0x1000;
     treeView.itemHeight = 16;
     treeView.setTextFont(1);
-    fontNo = 1;
     M5ButtonDrawer::setTextFont(1);
     M5ButtonDrawer::height = 14;
     M5ButtonDrawer::width = 64;
@@ -134,7 +182,6 @@ void CallBackStyle(MenuItem* sender)
     treeView.backgroundColor = 0x4208;
     treeView.itemHeight = 18;
     treeView.setTextFont(2);
-    fontNo = 2;
     M5ButtonDrawer::setTextFont(2);
     M5ButtonDrawer::height = 20;
     M5ButtonDrawer::width = 80;
@@ -166,7 +213,6 @@ void CallBackStyle(MenuItem* sender)
     treeView.itemHeight = 24;
     treeView.setFreeFont(&FreeSans9pt7b);
     M5ButtonDrawer::setFreeFont(&FreeSans9pt7b);
-    fontNo = 1;
     M5ButtonDrawer::height = 20;
     M5ButtonDrawer::width = 100;
     break;
@@ -182,7 +228,6 @@ void CallBackStyle(MenuItem* sender)
     treeView.itemHeight = 20;
     treeView.setTextFont(1);
     M5ButtonDrawer::setTextFont(1);
-    fontNo = 1;
     M5ButtonDrawer::height = 16;
     M5ButtonDrawer::width = 64;
     break;
@@ -198,10 +243,18 @@ void CallBackStyle(MenuItem* sender)
   M5.Lcd.fillRect(0, 218, M5.Lcd.width(), 22, 0);
 }
 
+// change screen brightness
+void CallBackBrightness(MenuItem* sender)
+{
+  MenuItemNumeric* mi = static_cast<MenuItemNumeric*>(sender);
+  if (!mi) return;
+  M5.Lcd.setBrightness(mi->value);
+}
+
 void setup() {
   M5.begin();
   Wire.begin();
-
+  // file system: size and position
   treeView.clientRect.x = 2;
   treeView.clientRect.y = 16;
   treeView.clientRect.w = 196;
@@ -223,12 +276,17 @@ void setup() {
 
   Rect16 r = treeView.clientRect;
   treeView.setItems(vmi
-               { new MenuItem("main 1", 1, vmi
-                 { new MenuItem("sub 1-1", 11, vmi
-                   { new MenuItem("sub 1-1-1", 111)
-                   } )
+               {  new MenuItem("WiFi ", vmi
+                 { new MenuItemWiFiClient("WiFi Client", CallBackWiFiClient)
+                 , new MenuItem("WiFi mode", CallBackWiFi, vmi
+                   { new MenuItem("WiFi disconnect(true)", 2000)
+                   , new MenuItem("WiFi mode OFF", 2001)
+                   , new MenuItem("WiFi mode STA", 2002)
+                   , new MenuItem("WiFi mode AP" , 2003)
+                   , new MenuItem("WiFi mode AP STA", 2004)
                  } )
-               , new MenuItemProject("ProJect List", CallBackProject, r.x+r.w+5, r.y+15, M5.Lcd.width()-r.x-r.w-8, r.h-16)
+               } )
+               ,new MenuItemProject("ProJect List", CallBackProject, r.x+r.w+5, r.y+2, M5.Lcd.width()-r.x-r.w-8, r.h+2)
                , new MenuItem("Setting", vmi
                {
                  new MenuItem("Style", CallBackStyle, vmi
@@ -238,7 +296,8 @@ void setup() {
                  , new MenuItem("Style 4", 1004)
                  , new MenuItem("Style 5", 1005)
                  , new MenuItem("Style 6", 1006)
-                 })
+                 }),
+                 new MenuItemNumeric("Brightness", 0, 255, 80, CallBackBrightness)
                })
                });
 
@@ -246,8 +305,12 @@ void setup() {
   drawFrame();
 }
 
+uint32_t loopcounter = 0;
 void loop() {
-  treeView.update();
+  MenuItem* mi = treeView.update();
+
+  if (!(loopcounter % 10))  header.draw();
+
   if (treeView.isRedraw()) {
     drawFrame();
   }
