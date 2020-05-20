@@ -419,6 +419,22 @@ The current projects allocation system has been addressed as a source of stress 
 
 #### Project Success
 
+Measuring the success of a project once it’s brought to completion is a valuable practice. It provides a learning opportunity for future undertakings, and, the opportunity to assess the true effectiveness of the project. In order to have a holistic view, objective and subjective criteria need to be considered.
+
+1. Scope
+Our project has achieved its objectives (develop an End-To-End System) within the given framework.
+
+2. Schedule
+Our team completed the project on time. We have three iteration during three months and have aims each iteration. We finished  this project in 20th,May (Deadline: 22nd, May). 
+
+3. Team satisfaction
+Our team leader give us comprehensive information about project goal and support our individual and team motivation.
+we set and communicate clear goals for all of our discussions and consistently follow those goals.
+we respect each other personally and in terms of expertise.
+we listen to each other by clarifying unclear points and asking appropriate questions during this development.
+we include all necessary team members in the decision making processes
+
+
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
 
 <br>
