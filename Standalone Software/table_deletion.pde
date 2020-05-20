@@ -1,11 +1,9 @@
-
 void clearTable(String[] colnames) {
   //Clear all the rows in the student table
   for (int i = 0; i < colnames.length; i++) {
     cp5.get(ScrollableList.class, colnames[i]).clear();
   }
 }
-
 
 void clearSupervisor() {
   projDescTextArea.setText("");
@@ -16,6 +14,7 @@ void clearSupervisor() {
   lectPhone.clear();
   projectTitle.clear();
 }
+
 void clearColumnsList() {
   nameCol.clear();
   emailCol.clear();

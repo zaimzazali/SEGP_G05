@@ -1,6 +1,5 @@
-
 ScrollableList addScrollableL(String colName, int xpos, int ypos, List<String> rows, color backCol) {
-  //Default scrobbableList
+  //Default scrollableList
   l  = cp5.addScrollableList(colName)
     .setPosition(xpos, ypos)
     .setSize(100, 600)
@@ -9,7 +8,6 @@ ScrollableList addScrollableL(String colName, int xpos, int ypos, List<String> r
     .addItems(rows)
     .setLabel(colName)
     .setType(ControlP5.LIST);
-    
   l.setColorBackground( color( backCol ) );
   l.setColorValue(255);     
   l.setColorLabel(0) ;
@@ -51,15 +49,11 @@ Knob addStats( String name, int xpos, int ypos, String caption, color col) {
 }
 
 
-void countProject() {
-
-  String query = "with nr_stud as (SELECT 0+ count(1)as c from student_info ),"+
-    "nr_proj as (SELECT 0+ count(1) as c from student_project)"+
-    "select nr_proj.c/nr_stud.c  * 100 as perc from nr_stud join nr_proj ;";
+void countProject() {    
   dbconnection = new MySQL ( this, "database-segp.ccxcz400iffs.eu-west-2.rds.amazonaws.com", database, user, pass );
   if (dbconnection.connect()) {
 
-    dbconnection.query( query);
+    dbconnection.query(countProjectsQuery);
     dbconnection.next();
 
     float projYes = dbconnection.getFloat("perc");

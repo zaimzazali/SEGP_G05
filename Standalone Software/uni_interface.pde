@@ -1,8 +1,6 @@
-
 import de.bezier.data.sql.*;
 import controlP5.*;
 import java.util.*;
-
 
 void setup() {
   size(1200, 800);
@@ -26,7 +24,7 @@ void setup() {
   notProjectKnob= addStats("knobB", 180, 70, "Not Have Project", color(200, 0, 0) );
 
   //Text Area containing project description
-   addTextArea(800, 180, "text");
+  addTextArea(800, 180, "text");
 
   //Table 
   addScrollableL("id", 0, 160, idCol, 90);
@@ -35,18 +33,18 @@ void setup() {
   addScrollableL("tel", 300, 160, telCol, 90);
   studProgram = addScrollableL("studProgram", 400, 160, idCol, 90);
   studProgram.setWidth(150);
-  
-  
+
+
   //Project info
-  projectTitle = addScrollableL("projTitle",700, 160, idCol, color(180, 180, 0));
+  projectTitle = addScrollableL("projTitle", 700, 160, idCol, color(180, 180, 0));
   projDesc = addScrollableL("projDesc", 800, 160, idCol, color(180, 180, 0));
   projDesc.setWidth(400);
   program = addScrollableL("program", 700, 280, idCol, color(180, 180, 0));
   dept = addScrollableL("dept", 800, 280, idCol, color(180, 180, 0));
   dept.setWidth(400);
-  
+
   //Supervisor info
-  supervisor = addScrollableL("supervisor",700, 320, idCol, color(0, 180, 180));
+  supervisor = addScrollableL("supervisor", 700, 320, idCol, color(0, 180, 180));
   supEmail = addScrollableL("supEmail", 900, 320, idCol, color(0, 180, 180));
 
   //Student info 
@@ -63,9 +61,6 @@ void setup() {
   lockScrollable();
 }
 
-
-
-
 void sendQuery(String query) {
   dbconnection = new MySQL ( this, "database-segp.ccxcz400iffs.eu-west-2.rds.amazonaws.com", database, user, pass );
   if (dbconnection.connect()) {
@@ -81,37 +76,31 @@ void sendQuery(String query) {
   {
     println("connection failed !");
   }
-  
+
   //Insert the arrays created into the table
   populateTable();
 }
 
-
 void controlEvent(ControlEvent theEvent) {
   //If the checkbox is clicked
-   
+
   if (theEvent.isFrom(toggle)) {
     //Clear table student
     clearTable(colnames);
     //Clear supervisor data
     clearSupervisor();
     clearColumnsList();
-    if(!toggleValue){
+    if (!toggleValue) {
       sendQuery(studentWithProjectQuery + endOfQuery);
       toggleValue = true;
-      toggle.setColorActive(color(0,255,0));
-    }
-    else{
+      toggle.setColorActive(color(0, 255, 0));
+    } else {
       sendQuery(allStudentsDataQuery + endOfQuery);
       toggleValue = false;
-      toggle.setColorActive(color(255,0,0));
+      toggle.setColorActive(color(255, 0, 0));
     }
   }
-  
 }
-
-
-
 
 public void search() {
   String name = cp5.get(Textfield.class, "").getText();
@@ -122,6 +111,7 @@ public void search() {
     sendQuery(allStudentsDataQuery+ " AND studName = '" + name + "';");
   }
 }
+
 public void refresh() {
   countProject();
   clearTable(colnames);
@@ -132,38 +122,25 @@ public void refresh() {
 }
 
 void lockScrollable() {
-  String[]colnames = {"name", "email", "tel", "supervisor", "supEmail","projTitle","program", "dept","studProgram","studSchool","projTitle","lectPhone","projDesc"};
+  String[]colnames = {"name", "email", "tel", "supervisor", "supEmail", "projTitle", "program", "dept", "studProgram", "studSchool", "projTitle", "lectPhone", "projDesc"};
   for (int i = 0; i < colnames.length; i++) {
     cp5.get(ScrollableList.class, colnames[i]).lock();
   }
 }
 
-
-
 CheckBox  addCheckBox(String name, int xpos, int ypos, String itemName, int itemVal) {
   //Add checkbox for students with or wirhout project
-  CheckBox checkbox = cp5.addCheckBox(name)
-    .setPosition(xpos, ypos)
-    .setSize(0, 0)
-    .setItemsPerRow(6)
-    .setSpacingColumn(0)
-    .setSpacingRow(20)
-    .addItem(itemName, itemVal);
+  CheckBox checkbox = cp5.addCheckBox(name);
 
-  checkbox.setColorBackground( color( 255, 0, 0 ) );
-  
- 
-toggle = cp5.addToggle("toggle")
-     .setPosition(0,0)
-     .setSize(50,20)
-     .setValue(true)
-     .setMode(ControlP5.SWITCH)
-     .setColorActive(color(255,0,0)) 
-.setColorBackground(color(200)) 
-.setCaptionLabel(itemName) 
-
-.setColorLabel(color(0,0,0)) ;
-     ;
+  toggle = cp5.addToggle("toggle")
+    .setPosition(0, 0)
+    .setSize(50, 20)
+    .setValue(true)
+    .setMode(ControlP5.SWITCH)
+    .setColorActive(color(255, 0, 0)) 
+    .setColorBackground(color(200)) 
+    .setCaptionLabel(itemName) 
+    .setColorLabel(color(0, 0, 0));
   return checkbox;
 }
 void addTextField() {
@@ -173,14 +150,9 @@ void addTextField() {
     .setSize(200, 20)
     .setFont(font)
     .setFocus(false)
-    .setColorForeground(255)
-
-    ;
+    .setColorForeground(255);
 }
 
-
 void draw() {
-
- 
   background(170);
 }

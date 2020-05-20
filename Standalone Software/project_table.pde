@@ -1,4 +1,3 @@
-
 void populateTable() {
   //Display data into the table
   cp5.get(ScrollableList.class, "id").addItems(idCol);
