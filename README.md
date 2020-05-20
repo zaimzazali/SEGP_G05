@@ -308,7 +308,10 @@ Below is the database accessibilities for each products :-
 
 #### 2) Web Application [(Read Product Description)](#2-Web-Application)
 
-1. It INSERT the data into the 'final_projects' table.
+1. It INSERT the data into the 'final_projects' table, which can be saved in JSON file.
+2. It displays the project list which uploaded by the specific lecturer (the user).
+3. Each project will displays the the project id, name, details, availble student and project status, etc.
+4. It allows the lecturer (the user) edit the project content and delete the project
 
 #### 3) IoT Device (M5 Stack) [(Read Product Description)](#3-IoT-Device-M5-Stack)
 
@@ -402,6 +405,11 @@ Nevertheless, any feedback would be a priceless view when it comes to the produc
 <br>
 
 #### How Coronavirus has affected our Project?
+From the end of 2019 until now, the impact of the Corona Virus Disease 2019 (COVID 19) has become more and more serious and intense. So the face-to-face meeting had to be cancelled, which has affected the development and implementation of our projects. Firstly, the three parts of this projects including Web Application, Standalone Software and IoT Device, has to be divided to different group members, instead of all working together, which result in a lack of connection between each part.
+
+Secondly, communication between group members can only be used on Whatsapp and instruction by teachers can only be used on Jitsi Meet, which cause misunderstanding the meanings of each other in the communication process.
+
+As a result, the outbreak has negative influences for group members so that the project has to be extended to meet the requirements for achieving the goals: The project is posted by the teacher online and can be selected by the student using the m5 stack.
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
 
