@@ -421,13 +421,13 @@ The current projects allocation system has been addressed as a source of stress 
 
 Measuring the success of a project once it’s brought to completion is a valuable practice. It provides a learning opportunity for future undertakings, and, the opportunity to assess the true effectiveness of the project. In order to have a holistic view, objective and subjective criteria need to be considered.
 
-1. Scope
+1. Scope:<br>
 Our project has achieved its objectives (develop an End-To-End System) within the given framework.
 
-2. Schedule
+2. Schedule:<br>
 Our team completed the project on time. We have three iteration during three months and have aims each iteration. We finished  this project in 20th,May (Deadline: 22nd, May). 
 
-3. Team satisfaction
+3. Team satisfaction:<br>
 Our team leader give us comprehensive information about project goal and support our individual and team motivation.
 we set and communicate clear goals for all of our discussions and consistently follow those goals.
 we respect each other personally and in terms of expertise.
