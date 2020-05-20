@@ -296,7 +296,9 @@ Below is the database accessibilities for each products :-
 
 #### 2) Web Application [(Read Product Description)](#2-Web-Application)
 
-1. It INSERT the data into the 'final_projects' table.
+1. It INSERT the data into the 'final_projects' table and displays the project list.
+2. It DELETE the data into the 'final_projects' table.
+3. It ALTER the data into the 'final_projects' table.
 
 #### 3) IoT Device (M5 Stack) [(Read Product Description)](#3-IoT-Device-M5-Stack)
 
