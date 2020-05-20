@@ -231,7 +231,7 @@ With the drawn ideas, we had transformed them into the real UI as below :- <br><
 #### 3) IoT Device (M5 Stack) [(Read Product Description)](#3-IoT-Device-M5-Stack)
 
 <p align="center">
-  <a href="https://youtu.be/" target="_blank"><img src="./readme_assets/dummy_videos/cover_not_ready.png" 
+  <a href="https://youtu.be/7IAIpus94tc" target="_blank"><img src="./readme_assets/dummy_videos/cover_4.png" 
   alt="M5 Stack Demonstration" width="720" border="100" /></a> <br>
   <b>Video 5: M5 Stack Demonstration</b>
 </p>
@@ -359,17 +359,17 @@ Below is the visualisation of the project milestone :-
   <b>Figure 7: Sprints Overview</b>
 </p>
 
-##### Get to know things...
+#### Get to know things...
 
 For the very **first sprint**, it was an eye-opener to our team since the technologies which were introduced, were entirely new for some of us. The objective was to get familiar with the devices and know their capacity and capability. We managed to **deploy each of the products locally** on each machine. In this sprint, M5 Stack was using the MQTT as the communication protocol to send message data.
 
-##### Integration...
+#### Integration...
 
 Moving to the next iteration, the **second sprint** of the project, we tried to integrate all the products and making them 'communicate' with one another. However, due to the **Covid-19 pandemic**, our team had to split out with zero team gathering activity. Without being able to gather, we could not integrate the products properly as the 'main' local server needs to be established by using the same Internet connectivity domain. Thus, we decided to properly connect the products with a well-establish and stable approach by using one of the **Cloud services**, that was the Amazon Web Services (AWS).
 
 Since data would be the main content for our products, we would need to record them in something that stores them. Thus, we used the database service provided by AWS, that was the Relational-Database Service (RDS). From the decision, we tweaked each product to adapt to the new requirements, that was to point to the cloud database.
 
-##### Polishing...
+#### Polishing...
 
 In the **third sprint**, as the **project deadline was approaching**, we used this project iteration to polish up our codes, in terms of the code optimisation and readability. As this would be our last sprint, it was the moment when we documented our project development.
 
@@ -438,6 +438,22 @@ It can be looked into several aspects and perspectives, for further enhancements
 
 #### Work Practices
 
+#### Plan
+
+We adjusted our plan according to the progress of the work and the problems encountered. At first, we planned to make m5stack a versatile portable device, just like a smart watch, which can handle functions, including time lists, shopping lists and clocks. However, when we wrote code in practice, we found it quite hard to make logic control of m5stack to undertake different task. So, after several discussion, we reduced the function to one and made it closer to us as a PGT student. It is important to change the team’s goals according to the current situation, and more importantly, all members reach an agreement on it.
+
+#### Task assignment
+
+We split our project into several subtasks. Everyone chooses one according to their own specialty, optimizes their own strength to benefit the project. During the collaboration, we help each other with lecture, workshop materials and code problems.
+
+#### Communication
+
+Affected by this special situation of COVID-19, it’s impossible for us to have a face-to-face meeting since April. We did our best to keep in touch online weekly. WhatsApp is our main communication tool, on which we made discussion, assigned tasks and reported individual task progress.
+
+#### Code Sharing
+
+Github is a good platform for storing and sharing code. We created different branches for different tasks, such as web, m5stack and markdown, to make sure everyone can undertake their own work parallelly. Otherwise, thing would get messy. At the meantime, we can see what other group members have done. Finally, we merge all branches into the master branch.
+
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
 
 <br>
@@ -462,5 +478,7 @@ As a result, the outbreak has negative influences for group members so that the 
 4. https://getbootstrap.com/docs/4.1/getting-started/introduction/ - Bootstrap's Documentation
 5. https://aws.amazon.com/rds/features/security/ - Amazon RDS Security
 6. https://github.com/ChuckBell/MySQL_Connector_Arduino - MySQL Connector/Arduino
+7. https://github.com/lovyan03/M5Stack_TreeView - M5Stack TreeView menu UI library
+8. https://github.com/lovyan03/M5OnScreenKeyboard - M5Stack OnScreenKeyboard library (for ASCII code)
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
