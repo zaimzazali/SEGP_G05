@@ -410,10 +410,9 @@ As the data stored into the database comprehend sensitive information of both st
 **Social impact**
 The current projects allocation system has been addressed as a source of stress for the majority of our colleagues, mainly because of the excel file provided that make difficult to navigate thru different projects. Therefore, providing a tool to help both students and lecturers to allocate their projects more efficiently, could very likely result in making student's university life more comfortable, therefore less stressful. Whereas, there is no evidence students would accept the system we deployed as a better, more user-friendly system compared to the current one. Further qualitative evaluation should be carried out on the network in order to prove it.
 
-
-
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
 
+<br>
 ---
 
 ### Project Evaluation
