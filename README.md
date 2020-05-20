@@ -308,7 +308,10 @@ Below is the database accessibilities for each products :-
 
 #### 2) Web Application [(Read Product Description)](#2-Web-Application)
 
-1. It INSERT the data into the 'final_projects' table.
+1. It INSERT the data into the 'final_projects' table, which can be saved in JSON file.
+2. It displays the project list which uploaded by the specific lecturer (the user).
+3. Each project will displays the the project id, name, details, availble student and project status, etc.
+4. It allows the lecturer (the user) edit the project content and delete the project
 
 #### 3) IoT Device (M5 Stack) [(Read Product Description)](#3-IoT-Device-M5-Stack)
 
