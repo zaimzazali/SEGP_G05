@@ -201,7 +201,8 @@ Next, to get the real feeling of using the 'Software' or 'Product', we had trans
   <b>Video 2: Prototyping by using Processing</b>
 </p>
 
-With the drawn ideas, we had transformed them into the real UI as below :-
+With the drawn ideas, we had transformed them into the real UI as below :- <br><br>
+**Note:** Below are the **product demonstration videos** for each of the developed products. It shows how our designs have evolved to enchance **User Experience** making it user-friendly to use.
 
 #### 1) Standalone Software [(Read Product Description)](#1-Standalone-Software)
 
@@ -290,7 +291,7 @@ Below is the simplest practical model design and currently in use for this parti
 
 <p align="center">
   <img src="./readme_assets/dbeaver_model.png" width="900"> <br>
-  <b>Figure X: Database Schema Structure</b>
+  <b>Figure 6: Database Schema Structure</b>
 </p>
 
 <br>
@@ -345,8 +346,22 @@ Below is the visualisation of the project milestone :-
 
 <p align="center">
   <img src="./readme_assets/sprints.png" width="1500"> <br>
-  <b>Figure X: Sprints Overview</b>
+  <b>Figure 7: Sprints Overview</b>
 </p>
+
+##### Get to know things...
+
+For the very **first sprint**, it was an eye-opener to our team since the technologies which were introduced, were entirely new for some of us. The objective was to get familiar with the devices and know their capacity and capability. We managed to **deploy each of the products locally** on each machine. In this sprint, M5 Stack was using the MQTT as the communication protocol to send message data.
+
+##### Integration...
+
+Moving to the next iteration, the **second sprint** of the project, we tried to integrate all the products and making them 'communicate' with one another. However, due to the **Covid-19 pandemic**, our team had to split out with zero team gathering activity. Without being able to gather, we could not integrate the products properly as the 'main' local server needs to be established by using the same Internet connectivity domain. Thus, we decided to properly connect the products with a well-establish and stable approach by using one of the **Cloud services**, that was the Amazon Web Services (AWS).
+
+Since data would be the main content for our products, we would need to record them in something that stores them. Thus, we used the database service provided by AWS, that was the Relational-Database Service (RDS). From the decision, we tweaked each product to adapt to the new requirements, that was to point to the cloud database.
+
+##### Polishing...
+
+In the **third sprint**, as the **project deadline was approaching**, we used this project iteration to polish up our codes, in terms of the code optimisation and readability. As this would be our last sprint, it was the moment when we documented our project development.
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
 
@@ -394,6 +409,19 @@ Nevertheless, any feedback would be a priceless view when it comes to the produc
 
 #### Future Work
 
+It can be looked into several aspects and perspectives, for further enhancements and improvements.
+
+| Aspect                           | Suggestion & Recommendation                                                                                                                                                                                                                                        |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Planning & Design of Requirement | To properly define each requirement with the 'Situation-Task-Action-Result' (STAR) method. This will give clear insights on why a product should be designed that way.                                                                                             |
+| Technology Capabilities          | To further explore any possible advanced functionalities of the devices used in the project, to bring more values to users.                                                                                                                                        |
+| Product Functionalities          | To add more essential functionalities to the products. For example, basic clock and alarm on M5 Stack.                                                                                                                                                             |
+| Team Communication               | To use GitHub more frequent. Update team members on what _needs to be done_, what _has been done_, and what _blocks the progression_. This will encourage more collaboration between members to solve any problems, and indirectly progress the project even more. |
+
+<p align="center">
+  <b>Table 3: Recommendations for Future Works</b>
+</p>
+
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
 
 <br>
@@ -405,6 +433,7 @@ Nevertheless, any feedback would be a priceless view when it comes to the produc
 <br>
 
 #### How Coronavirus has affected our Project?
+
 From the end of 2019 until now, the impact of the Corona Virus Disease 2019 (COVID 19) has become more and more serious and intense. So the face-to-face meeting had to be cancelled, which has affected the development and implementation of our projects. Firstly, the three parts of this projects including Web Application, Standalone Software and IoT Device, has to be divided to different group members, instead of all working together, which result in a lack of connection between each part.
 
 Secondly, communication between group members can only be used on Whatsapp and instruction by teachers can only be used on Jitsi Meet, which cause misunderstanding the meanings of each other in the communication process.
