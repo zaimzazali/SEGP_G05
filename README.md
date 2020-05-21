@@ -211,7 +211,7 @@ With the drawn ideas, we had transformed them into the real UI as below :- <br><
 #### 1) Standalone Software [(Read Product Description)](#1-Standalone-Software)
 
 <p align="center">
-  <a href="https://youtu.be/" target="_blank"><img src="./readme_assets/dummy_videos/cover_not_ready.png" 
+  <a href="https://youtu.be/atUIVkJooFA" target="_blank"><img src="./readme_assets/dummy_videos/cover_5.png" 
   alt="Standalone Software Demonstration" width="720" border="100" /></a> <br>
   <b>Video 3: Standalone Software Demonstration</b>
 </p>
