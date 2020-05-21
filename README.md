@@ -488,7 +488,7 @@ From the end of 2019 until now, the impact of the Corona Virus Disease 2019 (COV
 
 Secondly, communication between group members can only be used on Whatsapp and instruction by teachers can only be used on Jitsi Meet, which cause misunderstanding the meanings of each other in the communication process.
 
-As a result, the outbreak has negative influences for group members so that the project has to be extended to meet the requirements for achieving the goals: The project is posted by the teacher online and can be selected by the student using the m5 stack.
+As a result, the outbreak has negative influences for group members so that the project has to be extended to meet the requirements for achieving the goals: The project is posted by the teacher online and can be selected by the student using the M5 Stack.
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
 
