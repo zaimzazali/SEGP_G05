@@ -42,15 +42,15 @@ _"We are here to develop an End-To-End System to help students to survive their 
 
 #### Group Members
 
-|                                 Ruoyan                                  |                                 Huiyu                                  |                               Zhen Fan                               |                               Matteo Lecca                               |                                 Zaim Zazali                                 |
-| :---------------------------------------------------------------------: | :--------------------------------------------------------------------: | :------------------------------------------------------------------: | :----------------------------------------------------------------------: | :-------------------------------------------------------------------------: |
-|                                 ix19849                                 |                                pj19174                                 |                               cc19055                                |                                 qg19551                                  |                                   gv19698                                   |
-|                             Web Application                             |                            Web Application                             |                              IoT Device                              |                           Standalone Software                            |                                  Back-End                                   |
-| <img src="./readme_assets/profile_pictures/pic_ruoyan.png" width="150"> | <img src="./readme_assets/profile_pictures/pic_huiyu.png" width="150"> | <img src="./readme_assets/profile_pictures/pic_fan.png" width="150"> | <img src="./readme_assets/profile_pictures/pic_lecca.JPG" width="150"> | <img src="./readme_assets/profile_pictures/pic_zaimzazali.png" width="150"> |
+|                                 Ruoyan                                  |                                 Huiyu                                  |                               Zhen Fan                               |                              Matteo Lecca                              |                                 Zaim Zazali                                 |
+| :---------------------------------------------------------------------: | :--------------------------------------------------------------------: | :------------------------------------------------------------------: | :--------------------------------------------------------------------: | :-------------------------------------------------------------------------: |
+|                                 ix19849                                 |                                pj19174                                 |                               cc19055                                |                                qg19551                                 |                                   gv19698                                   |
+|                             Web Application                             |                            Web Application                             |                              IoT Device                              |                          Standalone Software                           |                                  Back-End                                   |
+| <img src="./readme_assets/profile_pictures/pic_ruoyan.png" width="150"> | <img src="./readme_assets/profile_pictures/pic_huiyu.png" width="150"> | <img src="./readme_assets/profile_pictures/pic_fan.png" width="150"> | <img src="./readme_assets/profile_pictures/pic_lecca.png" width="150"> | <img src="./readme_assets/profile_pictures/pic_zaimzazali.png" width="150"> |
 
 #### How We Operate
 
-The development team has been splitted into several Agile Pods which based on function group illustrated as below :-
+As shown above, the development team consists of five members, who are currently studying for MSc Computer Science at the University of Bristol. Our team has been splitted into several Agile Pods which based on function group illustrated as below :-
 
 <p align="center">
   <img src="./readme_assets/agile_pods.png" width="700"> <br>
@@ -64,6 +64,8 @@ With the limited number of man-powers and resources, the mobility for each of th
 ---
 
 ## About Our Project
+
+The whole project had run for a few weeks throughout the Teaching Block 2 (TB2). This section will be covering the overview of the developed system, designs of the system, journeys of the system development, and the evaluation of the system. For each of the headers, there will be more specific sub-headers that will explain the project in more detail.
 
 ### System Overview
 
@@ -91,24 +93,20 @@ Below are the products and their respective users :-
 2. **Web Application** - _Lecturers_
 3. **IoT Device** - _Students_
 
-The following sub-sections will explain on the system itself in more detail.
-
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
 
 <br>
 
 ### System Design
 
-Below is the overview architecture of the entire system.
+The whole system would be involving different kind of products with different functionalities. Each of the product would be connected to the Amazon Web Services (AWS) database through the Relational Database Service (RDS). Below is the overview architecture of the entire system.
 
 <p align="center">
   <img src="./readme_assets/system_arch.png" width="600"> <br>
   <b>Figure 2: System Architecture</b>
 </p>
 
-The whole system would be involving different kind of products with different functionalities. Each of the product would be connected to the Amazon Web Services (AWS) database through the Relational Database Service (RDS).
-
-MQTT is a great communication protocol to publish data to its subscribers as it is meant to send out current data. However, for our system, it requires more than just sending out the data. It requires us to record the data into a Database. Plus, most of the MQTT Brokers did not provide any built-in mechanism to save the data into the database. Thus, we took an approach to directly connect the M5 Stack straight to the Database that was hosted on the Cloud.
+Initially, we have been taught to use the Message Queuing Telemetry Transport (MQTT) as the medium of communication, but it is not mandatory as every team is allowed to choose any communication mediums that they are comfortable with. MQTT is a great communication protocol to publish data to its subscribers as it is meant to send out current data. However, for our system, it requires more than just sending out the data. It requires us to record the data into a Database. Plus, most of the MQTT Brokers did not provide any built-in mechanism to save the data into the database. Thus, we took an approach to directly connect the M5 Stack straight to the Database that was hosted on the Cloud.
 
 Below are the product requirements that have been defined during the _Planning and Design_ phase :-
 
@@ -348,6 +346,8 @@ Overall, although the client side is designed easily and firstly to visualize th
 
 ### System Implementation
 
+This section will be covering topics, such as the project development journey of our team and completed project sprints that had been undergone together as a team through this hard time due to the Covid-19 pandemic.
+
 #### Project Sprints Breakdown
 
 We have initially splitted this ambitious idea into several smaller chunks in order to fully realise it. It would require few more sprints in order to deploy the three products with the full features and functionalities. However, due to time constraints and Covid-19 pandemic, we only managed to undergo three times of the full software development life cycle, or simply with three Sprints. With these Sprints, we managed to produce **two versions** of the **Minimum Viable Products (MVPs)**.
@@ -424,18 +424,17 @@ The current projects allocation system has been addressed as a source of stress 
 Measuring the success of a project once it’s brought to completion is a valuable practice. It provides a learning opportunity for future undertakings, and, the opportunity to assess the true effectiveness of the project. In order to have a holistic view, objective and subjective criteria need to be considered.
 
 1. Scope:<br>
-Our project has achieved its objectives (develop an End-To-End System) within the given framework.
+   Our project has achieved its objectives (develop an End-To-End System) within the given framework.
 
 2. Schedule:<br>
-Our team completed the project on time. We have three iteration during three months and have aims each iteration. We finished  this project in 20th,May (Deadline: 22nd, May). 
+   Our team completed the project on time. We have three iteration during three months and have aims each iteration. We finished this project in 20th,May (Deadline: 22nd, May).
 
 3. Team satisfaction:<br>
-Our team leader give us comprehensive information about project goal and support our individual and team motivation.
-we set and communicate clear goals for all of our discussions and consistently follow those goals.
-we respect each other personally and in terms of expertise.
-we listen to each other by clarifying unclear points and asking appropriate questions during this development.
-we include all necessary team members in the decision making processes.
-
+   Our team leader give us comprehensive information about project goal and support our individual and team motivation.
+   we set and communicate clear goals for all of our discussions and consistently follow those goals.
+   we respect each other personally and in terms of expertise.
+   we listen to each other by clarifying unclear points and asking appropriate questions during this development.
+   we include all necessary team members in the decision making processes.
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
 
@@ -504,5 +503,6 @@ As a result, the outbreak has negative influences for group members so that the 
 6. https://github.com/ChuckBell/MySQL_Connector_Arduino - MySQL Connector/Arduino
 7. https://github.com/lovyan03/M5Stack_TreeView - M5Stack TreeView menu UI library
 8. https://github.com/lovyan03/M5OnScreenKeyboard - M5Stack OnScreenKeyboard library (for ASCII code)
+9. https://www.experfy.com/blog/insights-to-agile-methodologies-for-software-development - Insights to Agile Methodologies for Software Development
 
 [Go to Top](#COMSM1401---Software-Engineering--Group-Project)
